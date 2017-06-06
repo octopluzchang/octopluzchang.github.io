@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>oi_landing</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			margin:0;
+			height:100%;
+		}
+	</style>
+	<style>
+		#oilanding_hype_container {
+			background-image:url(Default@2x.png);
+			background-size: 100% 100%;
+		}
+	</style>
+
+	<script type="text/javascript" src="AppleClasses/AppleWidget.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		function widgetIsReady(hypeDocument, element, event) {
+			if(window.HYPE_loadedWidget == null) {
+				window.widget.notifyContentIsReady();
+				window.HYPE_loadedWidget = true;
+				document.getElementById("oilanding_hype_container").style["background-image"] = "none";
+			}
+			return true;
+		}
+
+		if("HYPE_eventListeners" in window === false) {
+			window.HYPE_eventListeners = Array();
+		}
+		window.HYPE_eventListeners.push({"type":"HypeSceneLoad", "callback":widgetIsReady});
+	</script>
+
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=320" />
+
+
+	<!-- end copy -->
+
+  </head>
+  <body>
+	
+	<!-- copy these lines to your document: -->
+
+	<div id="oilanding_hype_container" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;" aria-live="polite">
+		<script type="text/javascript" charset="utf-8" src="oi_landing.wdgt.hyperesources/oilanding_hype_generated_script.js?40987"></script>
+	</div>
+
+	<!-- end copy -->
+
+
+  </body>
+</html>

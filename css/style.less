@@ -1,0 +1,398 @@
+// Variates
+
+//Colors
+@theme-blue: #004DFF;
+@highlight: #eee;
+@yellow: #ebff00 ;
+@white: #fff;
+@wrapper-width: 95%;
+@stripes: repeating-linear-gradient(
+  -55deg,
+  @yellow,
+  @yellow 10px,
+  #fff 10px,
+  #fff 20px
+);
+@gradian: 
+    linear-gradient(
+  0deg,
+  @theme-blue 0%,
+  #0076ff 100%
+);
+
+
+//General Styles
+body{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    clear: both;
+    overflow-x: hidden;
+}
+.wrapper {
+            width: 80%;
+            margin: 0 auto;
+            clear: both;
+        }
+
+h1 {
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Muli', sans-serif;
+}
+
+h5 {
+    text-align: center;
+}
+
+a {
+    color: @theme-blue;
+    &:hover{
+        color: @theme-blue;
+    }
+    &:focus{
+        color: @theme-blue;
+        outline: none;
+    }
+}
+
+
+    //Main Navigation Styles
+
+#navbar {
+    text-align: center;
+    width: 100%;
+    background-color: @white;
+    color: @highlight;
+    position: absolute;
+    .list{
+        text-align: center;
+    }
+    .options {
+        margin:0;
+        padding: 0;
+        font-size: 20px;
+    }
+    .left {
+        //text-align: right;
+    }
+    
+    .right {
+        //text-align: left;
+    }
+    
+    
+}
+
+.nav>li>a {
+    border-radius: 0px;
+    &:hover{
+        background: @stripes;
+        
+    }
+    &:focus{
+        //background-color: @highlight;
+        background: @stripes;
+    }
+    
+}
+
+.nav .options.active {
+        background: @stripes;
+    }
+
+.fixed {
+        position: fixed !important;
+        top: 50px;
+        z-index: 999;
+        border-bottom: 1px solid #eee;
+    }
+
+#branding-bar {
+    background-color: @theme-blue;
+    position: fixed;
+    padding: 10px 0;
+    transition: 0.3s;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+    img {
+        height: 30px;
+    }
+    
+    &:hover, &:active {
+        background-color: @theme-blue + #111;
+    }
+}
+
+
+//Landing Section Styles
+
+#landing {
+    background: @gradian;   
+    color: @white;
+    text-align: center;
+    height: 90vh;
+    max-height: 720px;
+    min-height: 500px;
+    a {
+        color: @white;
+        text-decoration: underline;
+    }
+    #video-mask{
+        width: 100%;
+        height: 90vh;
+        background-color: @theme-blue;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        opacity: 0.8;
+    }
+    video {
+        min-width: 100%;
+        //min-height: 90vh;
+        position: absolute;
+        top: 0;
+        z-index: -3;
+        left: 0;
+        margin: 0 auto;
+        
+    }
+}
+
+
+//Portfolio Section Styles
+
+#portfolio {
+    display: block;
+    padding-top: 150px;
+    background-color: @white;
+}
+
+.work-cover {
+    margin-bottom: 50px;
+    img {
+        width: 100%;
+        height: auto;
+        border: 2px solid @highlight;
+        &:hover {
+        }
+    }
+    .captions {
+        text-align: center;
+    }
+}
+
+
+
+//Work Popover
+.modal-content {
+    .wrapper {
+        width: 100%;
+    }
+}
+.portfolio-navbar {
+    background-color:@white;
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    width: 100%;
+    padding: 10px 15px 0;
+    border-bottom: 1px solid #eee;
+    li{
+        list-style-image: url(../img/back.png);
+    }
+}
+.portfolio-modal .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+.portfolio-modal .modal-content h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.portfolio-modal .modal-content img {
+    margin:15px auto;
+}
+
+.portfolio-modal video {
+    width: 90%;
+    margin: 5%;
+    box-shadow: 0px 8px 15px;
+}
+
+.portfolio-modal h4{
+   color: #b7b5b5;
+}
+.portfolio-modal p{
+    font-size: 1.5em;
+}
+
+
+.portfolio-modal .modal-content .item-details {
+    margin: 30px 0;
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 45px;
+    margin-left: 35px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 45px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.portfolio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
+.portfolio-modal .modal-body {
+    padding: 0 20px;
+}
+
+.captions {
+    
+    p {
+        padding: 0;
+        margin: 10px 0 0;
+    }
+    h4 {
+        margin: 0;
+    }
+    
+}
+
+// Contact Section
+#contact {
+    clear: both;
+    padding-top: 100px;
+    
+}
+
+
+
+
+//Form Style
+
+#contactForm {
+    margin-bottom: 60px;
+}
+.floating-label-form-group {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #eee;
+}
+
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+    z-index: 1;
+    position: relative;
+    border: 0;
+    border-radius: 0;
+    font-size: 1.5em;
+    background: 0 0;
+    box-shadow: none!important;
+    resize: none;
+}
+
+.floating-label-form-group label {
+    padding:10px 14px 0;
+    display: block;
+    z-index: 0;
+    position: relative;
+    top: 2em;
+    margin: 0;
+    font-size: .85em;
+    line-height: 1.764705882em;
+    vertical-align: middle;
+    vertical-align: baseline;
+    opacity: 0;
+    -webkit-transition: top .3s ease,opacity .3s ease;
+    -moz-transition: top .3s ease,opacity .3s ease;
+    -ms-transition: top .3s ease,opacity .3s ease;
+    transition: top .3s ease,opacity .3s ease;
+}
+
+.floating-label-form-group::not(:first-child) {
+    padding-left: 14px;
+    border-left: 1px solid #eee;
+}
+
+.floating-label-form-group-with-value label {
+    top: 0;
+    opacity: 1;
+}
+
+.floating-label-form-group-with-focus label {
+    color: @theme-blue;
+}
+
+form .row:first-child .floating-label-form-group {
+    border-top: 1px solid #eee;
+}
+
+.btn{
+    background-color: @theme-blue;
+    color: @white;
+}
+
+//Social
+#social {
+    .social-options{
+        padding: 20px 0 20px 0;
+        margin: 10px 0;
+        font-size: 1em;
+        //border: 1px solid @highlight;
+        //text-align: center;
+    
+    .fb{
+            color: #113077;
+        }
+    .medium{
+            color: #16d007;
+        }
+        }
+}
+
+
+

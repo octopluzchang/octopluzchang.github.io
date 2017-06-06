@@ -1,0 +1,18 @@
+Thursday, 23-Feb-2017 21:57:44 - backup started
+Thursday, 23-Feb-2017 21:57:44 - wp version     : 4.7.2
+Thursday, 23-Feb-2017 21:57:44 - php version    : 5.5.38
+Thursday, 23-Feb-2017 21:57:44 - mysql version  : 5.6.35
+Thursday, 23-Feb-2017 21:57:44 - memory limit   : 1024M
+Thursday, 23-Feb-2017 21:57:44 - execution time : 600
+Thursday, 23-Feb-2017 21:57:44 - mysql timeout  : 600
+Thursday, 23-Feb-2017 21:57:44 - socket timeout : 600
+Thursday, 23-Feb-2017 21:57:44 - files larger than 25 MB will be excluded from the backup
+Thursday, 23-Feb-2017 21:57:44 - generating file list
+Thursday, 23-Feb-2017 21:57:44 - number of files to include in the archive is 6392, and their uncompressed size is 138.34 MB
+Thursday, 23-Feb-2017 21:57:44 - finished generating file list
+Thursday, 23-Feb-2017 21:57:44 - database backup started
+Thursday, 23-Feb-2017 21:57:44 - backing up tables with "wpk5_" prefix
+Thursday, 23-Feb-2017 21:57:44 - number of tables to backup - 31
+Thursday, 23-Feb-2017 21:57:45 - database backup finished
+Thursday, 23-Feb-2017 21:57:45 - archiving files using ziparchive
+Thursday, 23-Feb-2017 21:58:12 - backup finished
