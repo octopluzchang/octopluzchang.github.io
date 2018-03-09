@@ -13,6 +13,7 @@
 
 .section {
     padding: 50px 0;
+    box-sizing: border-box;
 }
 
 .sectionBG {
@@ -63,17 +64,19 @@
 
 #partD {
     padding: 0 100px;
+    box-sizing: border-box;
 }
 
 
 #tabContainer {
     border: 1px solid #e0e0e0;
     border-radius: 5px;
+    margin: 0;
 }
 
 #tabContainer .nav-pills {
     padding: 0;
-    
+    box-sizing: border-box;
 }
 
 #tabContainer .nav-pills .nav-link {
@@ -82,6 +85,7 @@
     padding: 23px 0;
     font-size: 16px;
     border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
 }
 
 .tab-content {
@@ -211,6 +215,8 @@ img {
     }
     #partD {
         padding: 0;
+    }
+    #tabContainer .nav-item {
     }
 }
 
