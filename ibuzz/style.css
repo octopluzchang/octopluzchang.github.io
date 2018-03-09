@@ -64,6 +64,8 @@
 #partD {
     padding: 0 100px;
 }
+
+
 #tabContainer {
     border: 1px solid #e0e0e0;
     border-radius: 5px;
@@ -206,6 +208,9 @@ img {
     #partA {
         background-size: auto 100%;
     height: auto;
+    }
+    #partD {
+        padding: 0;
     }
 }
 
