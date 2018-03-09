@@ -1,10 +1,9 @@
 /*Colors*/
+
 .bg-themecolor {
     background-color: #2a78cc;
     color: white;
 }
-
-
 
 .container {
     max-width: 1060px;
@@ -25,7 +24,7 @@
 }
 
 #partA {
-    background-image:  url(img/bg_part-a.jpg);
+    background-image: url(img/bg_part-a.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -41,10 +40,10 @@
     background-size: 100%;
 }
 
-
 #partC {
     color: white;
 }
+
 #partC .icon {
     border-radius: 50%;
     display: inline-block;
@@ -67,7 +66,6 @@
     box-sizing: border-box;
 }
 
-
 #tabContainer {
     border: 1px solid #e0e0e0;
     border-radius: 5px;
@@ -82,19 +80,38 @@
 #tabContainer .nav-pills .nav-link {
     height: 100%;
     border-radius: 0;
-    padding: 23px 0;
+    padding: 10px 0;
     font-size: 16px;
     border-bottom: 1px solid #e0e0e0;
     box-sizing: border-box;
 }
 
+#tabContainer .nav-pills .nav-link.active {
+    background-color: #2a78cc;
+}
+
+.nav-link .icon.active {
+    display: none;
+}
+
+.nav-link.active .icon.active  {
+    display: inline-block;
+}
+
+.nav-link .icon.inactive {
+    display: inline-block;
+}
+
+.nav-link.active .icon.inactive  {
+    display: none;
+}
+
 .tab-content {
-    border-left: 1px solid #57a8ff;
+    border-left: 0px solid #ffffff;
     color: white;
     padding: 10px;
     box-sizing: border-box;
 }
-
 
 #partE {
     color: white;
@@ -109,6 +126,11 @@
     font-weight: bold;
     text-align: center;
     margin: 20px 0;
+}
+
+#footer h5 {
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
 }
 
 .btn {
@@ -128,6 +150,7 @@ img {
     width: 150px;
     height: 150px;
 }
+
 
 /*
  * Custom translucent site header
@@ -211,7 +234,10 @@ img {
 @media (max-width: 768px) {
     #partA {
         background-size: auto 100%;
-    height: auto;
+        height: auto;
+    }
+    #partC .block {
+        margin-bottom: 50px;
     }
     #partD {
         padding: 0;
@@ -220,12 +246,14 @@ img {
         flex-direction: row !important;
     }
     #tabContainer .nav-item {
-        flex-basis:auto;
+        flex-basis: auto;
         width: 46%;
+    }
+    #footer h5 {
+        margin-top: 30px;
     }
 }
 
 .overflow-hidden {
     overflow: hidden;
-    
 }
