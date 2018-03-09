@@ -216,7 +216,12 @@ img {
     #partD {
         padding: 0;
     }
+    .nav-pills {
+        flex-direction: row !important;
+    }
     #tabContainer .nav-item {
+        flex-basis:auto;
+        width: 46%;
     }
 }
 
