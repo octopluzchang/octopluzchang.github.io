@@ -26,12 +26,13 @@
 }
 
 #partA {
-    padding: 70px 0;
+    background-image: url(img/bg_part-a.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    padding: 120px 0;
     overflow: hidden;
     position: relative;
-    background-image: url(img/bg_partA.png);
-    background-size: 200px;
-    background-color: #206bbc;
 }
 
 #partA .bubble {
