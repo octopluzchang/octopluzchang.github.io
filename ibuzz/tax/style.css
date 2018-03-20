@@ -1,0 +1,244 @@
+/*Colors*/
+
+.bg-themecolor {
+    background-color: #49a892;
+    color: white;
+}
+
+.container {
+    max-width: 1060px;
+    text-align: center;
+}
+
+.section {
+    box-sizing: border-box;
+    padding: 50px 0;
+}
+
+.sectionBG {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+    opacity: 0.4;
+}
+
+#partA {
+    background-image: url(img/bg_partA.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 800px auto;
+    height: 80vh;
+}
+
+#partB {
+    background-image: url(img/bg_partB.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto 90%;
+    overflow: hidden;
+    position: relative;
+}
+
+.thought {
+    margin: 50px;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 20px 40px;
+    color: black;
+    display: inline-block;
+}
+
+#partB span.icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+    background-image: url(img/ic_cross.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.bg-pattern {
+    background-image: url(img/bg_light.png);
+    background-size: 200px;
+}
+
+#partC li {
+    list-style: none;
+    margin: 30px;
+}
+
+.badge {
+    font-size: 20px;
+}
+
+h3 .badge {
+    font-size: 30px;
+}
+
+#partD {
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+
+#partD {
+    color: white;
+}
+
+#partD .block {
+    display: inline-block;
+    padding: 5px 30px;
+    background-color: #3c7e6f;
+    border-radius: 30px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+}
+
+#footer h5 {
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+
+.btn {
+    border-radius: 30px;
+}
+
+img {
+    width: 100%;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+.icon.large {
+    width: 150px;
+    height: 150px;
+}
+
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+    color: #999;
+    transition: ease-in-out color .15s;
+}
+
+.site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 540px;
+    background-color: #333;
+    border-radius: 21px;
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.product-device::before {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    bottom: 10%;
+    left: 10px;
+    content: "";
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+}
+
+.product-device-2 {
+    top: -25%;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+    background-color: #e5e5e5;
+}
+
+
+/*
+ * Extra utilities
+ */
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.flex-equal > * {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    #partA {
+        background-size: 100% auto;
+        background-position: bottom;
+        padding-bottom: 150px;
+        height: auto;
+    }
+    #partB {
+        background-size: auto 350px;
+        padding-top: 400px;
+        height: auto;
+    }
+    .badge {
+        display: block;
+    }
+    .thought {
+        font-size: 15px;
+        margin: 10px;
+    }
+    #partC img{
+        height: 300px;
+        width: auto;
+    }
+    #partD .block {
+        display: block;
+        margin: 10px;
+        padding: 10px;
+    }
+    #partD {
+        padding: 0;
+    }
+    #footer h5 {
+        margin-top: 30px;
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
