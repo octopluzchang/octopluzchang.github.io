@@ -30,7 +30,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 800px auto;
-    height: 80vh;
+    height: 600px;
 }
 
 #partB {
@@ -71,8 +71,20 @@
     margin: 30px;
 }
 
+#partC li > div {
+    display: inline-block;
+}
+
+#partC.container {
+    background: url(img/bg_partC-1.png) left bottom no-repeat, url(img/bg_partC-2.png) right bottom no-repeat;
+}
+
 .badge {
     font-size: 20px;
+}
+
+li .badge {
+    width: 200px;
 }
 
 h3 .badge {
@@ -204,6 +216,19 @@ img {
 }
 
 @media (max-width: 768px) {
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h3 .badge {
+        font-size: 18px;
+        display: inline-block;
+    }
     #partA {
         background-size: 100% auto;
         background-position: bottom;
@@ -215,21 +240,32 @@ img {
         padding-top: 400px;
         height: auto;
     }
+    
     .badge {
         display: block;
     }
+    li .badge {
+    width: 100%;
+}
     .thought {
         font-size: 15px;
         margin: 10px;
+        width: 290px;
     }
     #partC img{
         height: 300px;
         width: auto;
     }
+    #partC {
+        padding-bottom: 250px;
+    }
     #partD .block {
         display: block;
         margin: 10px;
         padding: 10px;
+    }
+    #partD h2 {
+        padding: 0px 40px;
     }
     #partD {
         padding: 0;
