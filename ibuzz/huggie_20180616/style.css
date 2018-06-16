@@ -10,10 +10,21 @@ body {
 }
 
 .container {
+    width: 100%;
+    padding-top: 156%;
+    background-image: url(img/main.png);
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
     background-color: #fbe2d2;
+    min-height: 100vh;
+    max-height: 1400px;
+    box-sizing: border-box;
+/*
     max-height: 1650px;
     min-height: 1500px;
     height: 100vh;
+*/
     position: relative;
 }
 
