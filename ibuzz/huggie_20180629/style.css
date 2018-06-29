@@ -12,7 +12,7 @@ body {
 .container {
     width: 100%;
     padding-top: 160%;
-    background-image:  url(img/detial.png),url(img/header.png);
+    background-image:  url(img/main.png),url(img/header.png);
     background-size: 100%;
     background-position: bottom,top;
     background-repeat: no-repeat;
