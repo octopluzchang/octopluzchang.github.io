@@ -11,24 +11,25 @@ body {
 
 .container {
     width: 100%;
-    padding-top: 208%;
-    background-image: url(img/main.png);
+    padding-top: 160%;
+    background-image:  url(img/detial.png),url(img/header.png);
     background-size: 100%;
-    background-position: top;
+    background-position: bottom,top;
     background-repeat: no-repeat;
-    background-color: #fbe2d2;
+    background-color: #f0e8c0;
+    max-height: 100vh;
     box-sizing: border-box;
     position: relative;
 }
 
-img#main, img#comic {
+img#footer {
     width: 100%;
 }
 
 img#button {
-    width: 37%;
+    width: 40%;
     position: absolute;
     right: 15px;
-    bottom: 17%;
+    top: 300px;
     transform: translateY(17%);
 }
