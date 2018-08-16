@@ -8,3 +8,8 @@
 @import 'components.less';
 @import 'slick.less';
 @import 'slick-theme.less';
+
+body {
+    color: @grey-dark;
+    background-color: @grey-bg;
+}

@@ -18,6 +18,9 @@
   }
 }
 
+
+
+
 //Event List
 //With Featured Cards
 .event-card-container {
@@ -85,15 +88,19 @@
       width: inherit;
     }
   }
+    .media-body {
+        padding-left: 10px;
+    }
   .footer {
-    padding: 5px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }
 
 //Media
 .media {
   background-color: white;
-  padding: 5px;
+  padding: 10px;
   border-bottom: 1px solid @grey-bg;
   a {
     color: @grey-dark;
@@ -131,6 +138,26 @@
     }
   }
 }
+
+//Open time list
+#open-time-list {
+    .media {
+        margin-bottom: 5px;
+        padding: 20px 10px;
+    }
+    .media-body {
+        &:first-child {
+            border-right: 1px solid @grey-light;
+        }
+        &:last-child {
+            padding-left: 10px;
+            border-right: 0px solid @grey-light;
+        }
+        
+    }
+}
+
+
 
 //Footer
 footer {
