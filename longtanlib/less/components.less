@@ -18,6 +18,36 @@
   }
 }
 
+//Badge 
+.badge {
+    background-color: @green;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    border-radius: 0;
+}
+
+
+//Gallary
+.gallary-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-row: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px 0;
+    .gallary-item {
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+
 //Event List
 //With Featured Cards
 .event-card-container {
