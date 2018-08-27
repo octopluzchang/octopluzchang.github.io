@@ -73,39 +73,6 @@
   }
 }
 
-.item {
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  display: inline-block;
-  z-index: 3;
-  &#biography {
-    background-image: url(../assets/img/item_biography.png);
-    left: 15%;
-    top: 34%;
-    //max-width: 103px;
-    width: 8%;
-    padding-top: 8%;
-  }
-  &#board {
-    background-image: url(../assets/img/item_board.png);
-    left: 29%;
-    top: 10%;
-    //max-width: 221px;
-    width: 15%;
-    padding-top: 12%;
-  }
-  &#recorder {
-    background-image: url(../assets/img/item_recorder.png);
-    left: 65%;
-    top: 17%;
-    //max-width: 133px;
-    width: 10%;
-    padding-top: 15%;
-  }
-}
-
 #on-floor {
   position: absolute;
   bottom: 0%;
@@ -192,7 +159,7 @@
     }
     &#people_8 {
       background-image: url(../assets/img/people_8.png);
-      left: 86%;
+      left: 82%;
       bottom: 5%;
       width: 6%;
       padding-top: 13%;
@@ -200,6 +167,63 @@
         left: 25%;
         bottom: 0%;
       }
+    }
+      &:hover {
+          .imagination {
+              opacity: 1;
+          }
+      }
+  }
+  .imagination {
+    opacity: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    display: inline-block;
+    z-index: 3;
+    .ease-in-out-transition;
+    &#imagination_1 {
+      background-image: url(../assets/img/imagination_1.png);
+      left: 27%;
+      top: 16%;
+      width: 25%;
+      padding-top: 25%;
+    }
+      &#imagination_3 {
+      background-image: url(../assets/img/imagination_3.png);
+      left: 27%;
+      top: -120%;
+      width: 150%;
+      padding-top: 110%;
+    }
+      &#imagination_4 {
+      background-image: url(../assets/img/imagination_4.png);
+      left: 86%;
+      top: -19%;
+      width: 90%;
+      padding-top: 90%;
+    }
+      &#imagination_6 {
+      background-image: url(../assets/img/imagination_6.png);
+      left: -36%;
+      top: -80%;
+      width: 190%;
+      padding-top: 190%;
+    }
+      &#imagination_7 {
+      background-image: url(../assets/img/imagination_7.png);
+      left: 16%;
+      top: -129%;
+      width: 90%;
+      padding-top: 90%;
+    }
+      &#imagination_8 {
+      background-image: url(../assets/img/imagination_8.png);
+      left: 86%;
+      top: 19%;
+      width: 190%;
+      padding-top: 190%;
     }
   }
   @media @mobile {
@@ -233,6 +257,38 @@
   background-position: bottom center;
   min-width: 500px;
   min-height: 250px;
+  .item {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    display: inline-block;
+    z-index: 3;
+    &#biography {
+      background-image: url(../assets/img/item_biography.png);
+      left: 15%;
+      top: 34%;
+      //max-width: 103px;
+      width: 8%;
+      padding-top: 8%;
+    }
+    &#board {
+      background-image: url(../assets/img/item_board.png);
+      left: 29%;
+      top: 10%;
+      //max-width: 221px;
+      width: 15%;
+      padding-top: 12%;
+    }
+    &#recorder {
+      background-image: url(../assets/img/item_recorder.png);
+      left: 65%;
+      top: 17%;
+      //max-width: 133px;
+      width: 10%;
+      padding-top: 15%;
+    }
+  }
 }
 
 #wall {
@@ -243,29 +299,27 @@
   left: 0;
   z-index: 0;
   background-color: #fcf8f2;
-    #wall-shadow {
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 20%;
-        background-color: #f0efec;
-    }
+  #wall-shadow {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    background-color: #f0efec;
+  }
 }
 
 .windows {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -60%;
-    width: 100%;
-    height: 100%;
-    text-align: right;
-    background-image: url(../assets/img/bg_window.png);
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -60%;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  background-image: url(../assets/img/bg_window.png);
   background-repeat: repeat-x;
-    background-size: 20% auto;
-    background-position: left 70%;
+  background-size: 20% auto;
+  background-position: left 70%;
 }
-
-
