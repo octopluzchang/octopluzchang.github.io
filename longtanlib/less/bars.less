@@ -1,39 +1,101 @@
 #navbar {
   background-color: white;
+  padding: 0 10px;
   .navbar-brand {
-    width: 250px;
-    height: 40px;
-    background-image: url(../assets/img/bg_navbar_logo.png);
+    width: 290px;
+    height: 73px;
+    background-image: url(/_res/img/bg_navbar_logo.png);
     background-repeat: no-repeat;
     background-size: 100%;
+      @media @mobile {
+          width: 200px;
+          height: 60px;
+      }
   }
-  .nav-item > a {
-    font-size: .9em;
-    color: @grey-dark;
-    &:hover {
-      color: @grey-light;
+    .nav-group {
+        display: inherit;
+        margin-left: 10px;
+        padding-left: 10px;
+        border-left: 1px solid @grey-light;
+        .dropdown-menu {
+        right: 0;
+            left: auto;
+    }
+        @media @mobile {
+            border: none;
+            border-top: 1px solid @grey-light;
+            padding: 0;
+            margin: 0;
+            display: block;
+        }
+    }
+  .nav-item {
+    a {
+      font-size: 1em;
+      color: @grey-dark;
+        white-space: nowrap;
+        padding: 0.5em;
+      &:hover {
+        color: @grey-light;
+      }
+    }
+    &.active {
+    border-bottom: 6px solid @orange;
+      a {
+        color: @orange;
+        &:hover {
+          color: @orange;
+        }
+      }
+        .dropdown-menu {
+            a {
+                color: @grey-dark-content;
+                &.active {
+                    color: white;
+                    background-color: @orange;
+                }
+            }
+        }
     }
   }
+    .dropdown-menu {
+        top: 70%;
+    }
   &.home {
     background: @black-gradient-top;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    height: 125px;
     z-index: 1;
-      padding-bottom: 40px;
-          padding-top: 40px;
+    padding-bottom: 40px;
+    padding-top: 40px;
     .navbar-brand {
-      background-image: url(../assets/img/bg_navbar_logo_w.png);
+      width: 305px;
+      height: 45px;
+      background-image: url(/_res/img/bg_navbar_logo_w.png);
+      @media @tablet {
+        width: 250px;
+        height: 40px;
+      }
     }
     .nav-item > a {
       color: white;
       text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.95);
+      font-size: 1.133em;
+        
       &:hover {
         opacity: 0.9;
       }
     }
+    @media @tablet {
+      height: auto;
+    }
   }
+    @media @tablet {
+        padding: 0 10px;
+    }
 }
 
 .news-scroll-bar {
@@ -43,13 +105,16 @@
   display: flex;
   background-color: @orange;
   overflow: hidden;
-  //white-space: nowrap;
+  font-size: 1.33em;
+    font-weight: bold;
   .title {
     padding: 10px;
-    padding-left: 20px;
+    padding-left: 40px;
+    padding-right: 20px;
     box-sizing: border-box;
     background-color: @grey-dark;
     position: relative;
+      white-space: nowrap;
     &:after {
       content: "";
       display: block;
@@ -65,24 +130,28 @@
   .content {
     padding: 10px;
     padding-left: 50px;
+    width: 100%;
   }
-    @media @mobile {
-        display: block;
-        .title {
-            &:after {
-                display: none;
-            }
-        }
-        .content {
-            padding-left: 20px;
-        }
+  @media @tablet {
+    display: block;
+    .title {
+        max-width: 100%;
+        padding: 10px;
+      &:after {
+        display: none;
+      }
     }
+    .content {
+      padding-left: 20px;
+    }
+  }
 }
 
 .breadcrumb {
   background: transparent;
   margin-bottom: 0px;
   padding: 10px 0;
+    margin: 10px 0;
   .breadcrumb-item {
     a {
       color: @grey-light;
@@ -94,6 +163,6 @@
   background-color: transparent;
   color: @grey-light;
   border-top: 1px solid @grey-light;
-  padding: 10px 0;
+  padding: 10px;
   border-bottom: 0px;
 }

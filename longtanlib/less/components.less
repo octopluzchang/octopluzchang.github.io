@@ -3,15 +3,70 @@
   .nav {
     background-color: transparent;
     color: white;
+    &.flex-column {
+      .nav-item {
+        margin-bottom: 10px;
+          a {
+              padding: 15px;
+              font-size: 1.13em;
+          }
+      }
+    }
     .nav-item {
       a {
         border-radius: 0px;
         color: @grey-dark;
         background-color: white;
-        margin-bottom: 5px;
+          font-size: 1em;
+          padding: 15px;
+        &.dark {
+          color: white;
+          background-color: @grey-dark;
+        }
         &.active {
           background-color: @green;
           color: white;
+        }
+      }
+    }
+  }
+  .media-body {
+      p {
+          font-size: 1.13em;
+          margin-bottom: 0;
+      }
+      small {
+          margin-top: 0px;
+          font-size: 1em;
+          &>span {
+              padding: 0;
+              padding-right: 15px;
+              margin-right: 15px;
+          }
+      }
+    
+  }
+  &.secondary {
+    .nav {
+      background-color: transparent;
+    margin-bottom: 20px;
+        border-bottom: 1px solid @grey-light;
+      .flex-column {
+        .nav-item {
+          margin-bottom: 5px;
+        }
+      }
+      .nav-item {
+        a {
+          border-radius: 0px;
+          color: @grey-dark;
+          background-color: transparent;
+            padding: 10px 30px;
+          &.active {
+            background-color: transparent;
+            color: @orange;
+              border-bottom: 5px solid @orange;
+          }
         }
       }
     }
@@ -24,8 +79,9 @@
   color: white;
   padding: 10px 20px;
   margin-bottom: 20px;
-  font-size: 0.9em;
+  font-size: 0.8em;
   border-radius: 0;
+    margin-right: 10px;
 }
 
 //Gallary
@@ -34,18 +90,21 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   margin: 10px 0;
+  &.album {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .gallary-item {
     position: relative;
     height: 70px;
     box-sizing: border-box;
     overflow: hidden;
     .gallary-link {
-      display: inline-block;
-      position: relative;
-      height: 100%;
+      position: absolute;
+          width: 100%;
+          top: 50%;
+          transform: translateY(-50%) scale(2);
       img {
-        max-width: none;
-        height: 100%;
+        max-width: 100%;
       }
     }
   }
@@ -72,24 +131,43 @@
 //    }
 //  }
 //}
+//Book List
+.book-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  @media @mobile {
+    display: block;
+  }
+}
+
 //Event List
 //With Featured Cards
 .event-card-container {
   display: grid;
   grid-template-columns: auto auto;
+  grid-gap: 15px;
+  margin-bottom: 10px;
   .featured {
-    padding-bottom: 5px;
     background-color: black;
     .event-thumbnail {
       width: 100% !important;
-      padding-bottom: 100% !important;
+      padding-bottom: 91% !important;
     }
     .event-content {
-      width: 50% !important;
+      width: 58% !important;
       display: block;
+      h3 {
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+        @media @mobile {
+            width: 100% !important;
+        }
     }
     .event-excerpt {
       color: white;
+        padding-left: 0px;
       text-shadow: 4px 4px 11px rgba(0, 0, 0, 1) !important;
     }
   }
@@ -102,7 +180,7 @@
         grid-column-end: span 0;
         .featured;
       }
-      &:last-child {
+      &:nth-child(6) {
         grid-row-start: 3;
         grid-row-end: span 2;
         grid-column-start: 2;
@@ -114,6 +192,20 @@
   @media @mobile {
     display: block;
   }
+}
+
+.album-card-container,
+.auther-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+    @media @mobile {
+          grid-template-columns: 1fr 1fr;
+      }
+}
+
+.year-container {
+  margin-bottom: 40px;
 }
 
 //Feature List
@@ -135,7 +227,7 @@
       transform: translateY(-50%);
       .white-shadow-text;
       padding: 5px;
-      font-size: 1.3em;
+      font-size: 1.33em;
     }
     img {
       opacity: 0.8;
@@ -143,19 +235,34 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+        width: auto;
       height: 100%;
       left: 0;
-      @media @mobile {
+      @media @tablet {
         height: auto;
+          width: 100%;
       }
     }
   }
+    .media {
+        padding: 0;
+    }
   .media-body {
-    padding-left: 10px;
+      padding: 0 10px;
+      min-height: 82px;
+      small {
+          margin: 0;
+          font-size: 1em;
+          margin-top: 5px;
+      }
+    a {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
   }
   .footer {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+    padding: 10px;
+    font-size: 0.9em;
   }
 }
 
@@ -167,26 +274,67 @@
   a {
     color: @grey-dark;
     font-weight: bold;
+      
   }
   small {
     color: @grey-light;
+      display: inline-block;
+      margin: 5px 0;
+      margin-top: 10px;
+      font-size: 0.8em;
+      font-weight: bold;
+      &>span {
+          margin-right: 8px;
+          border-right: 1px solid @grey-light;
+          padding: 3px 8px;
+          padding-left: 0px;
+          
+          &:last-child {
+              border-right: none;
+          }
+      }
   }
   .tag {
     color: @green;
     white-space: nowrap;
   }
-  iframe {
+  .video-thumbnail,
+  .video-player {
     width: 100%;
-    height: 100px;
+    min-height: 132px;
     background-color: @grey-light;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: inherit;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) scale(1.3);
+    }
+  }
+  .media-body {
+    position: relative;
+  }
+  .Btn_play_video {
+    position: absolute;
+    top: -90px;
+    z-index: 1;
+    cursor: pointer;
+    left: 50%;
+    margin-left: -25px;
+    &>img {
+      width: 50px;
+      height: 50px;
+    }
   }
   &.featured {
     position: relative;
     padding: 0;
-    iframe {
-      min-height: 300px;
+    .video-thumbnail {
+      height: 330px;
     }
     .media-body {
+      display: flex;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -195,8 +343,27 @@
       box-sizing: border-box;
       color: white;
       background: @black-gradient-bottom;
+      &>div {
+        margin-right: 20px;
+      }
+      small {
+        color: white;
+        font-size: 1em;
+          &>span:first-child {
+              border-right: 1px solid white;
+          }
+      }
       a {
         .white-shadow-text;
+      }
+      .Btn_play_video {
+        position: static;
+        transform: translateY(0%);
+        margin-left: 20px;
+        &>img {
+          width: auto;
+          height: auto;
+        }
       }
     }
   }
@@ -207,30 +374,75 @@
   .media {
     margin-bottom: 5px;
     padding: 20px 10px;
+    position: relative;
   }
   .media-body {
+    padding: 10px;
+    h3 {
+      margin-bottom: 0;
+      font-size: 1.667em;
+      font-weight: bold;
+        white-space: nowrap;
+    }
+    h6 {
+      font-size: 1em;
+        font-weight: bold;
+    }
     &:first-child {
-      border-right: 1px solid @grey-light;
+      border-right: 1px solid @grey-bg;
     }
     &:last-child {
       padding-left: 10px;
-      border-right: 0px solid @grey-light;
+      border-right: 0px solid @grey-bg;
     }
+  }
+  .Btn_readMore {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: inline-block;
+  }
+}
+
+.ad-banners {
+  &>a {
+    margin-bottom: 10px;
+    display: inline-block;
+    box-shadow: @shadow;
   }
 }
 
 //Footer
 footer {
-  color: white;
+  color: @grey-light;
   background-color: @grey-dark;
   margin-top: 50px;
+  font-size: 1em;
   .row {
     margin-bottom: 5px;
   }
+  h4.filled {
+    font-size: 1.33em;
+    padding-left: 10px;
+      color: @grey-light;
+  }
+  a {
+    font-size: 1em;
+      color: white;
+      &:hover {
+          color: white;
+      }
+  }
   .content {
+    padding-left: 20px !important;
     border-left: 1px solid @grey-light;
   }
   ul {
     margin-left: 10px;
+  }
+  li {
+    margin-bottom: 10px;
   }
 }

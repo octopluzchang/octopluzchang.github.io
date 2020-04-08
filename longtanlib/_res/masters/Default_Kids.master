@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default_Kids.master.cs" Inherits="_res_master_Default_Kids" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/_res/imgfavicon.ico" />
+
+
+    <link rel="stylesheet" type="text/css" href="/_res/css/kids.css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="navbar">
+        <div class="wrapper">
+            <a href="/kids/" id="nav-logo"></a>
+            <div class="nav">
+                <a href="event_list.aspx" id="item_1" class="nav-item">
+                    <span>活動資訊</span>
+                </a>
+                <a href="history.aspx" id="item_2" class="nav-item">
+                    <span>黃金年代</span>
+                </a>
+                <a href="biography.aspx" id="item_3" class="nav-item">
+                    <span>鄧雨賢</span>
+                </a>
+                <a href="/" id="item_4" class="nav-item">
+                    <span>大朋友版</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <footer>
+        <div class="wrapper">
+            <div class="footer-content"></div>
+        </div>
+    </footer>
+
+     <script src="/_res/js/less.js"></script>
+    <script src="/_res/js/jquery.js"></script>
+</body>
+</html>

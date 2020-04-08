@@ -1,0 +1,82 @@
+input[type="text"] {
+  background-color: @grey-dim;
+  border: none;
+  border-radius: 0px;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: @grey-dim;
+  }
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: @grey-light;
+  opacity: 1;
+  /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: @grey-light;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: @grey-light;
+}
+
+//Album page Styles
+.album-details,
+.auther-details {
+  font-size: 1em;
+  margin: 20px 0;
+  color: @grey-light;
+  position: relative;
+  .row {
+    margin-bottom: 0px;
+  }
+}
+
+.form-info {
+    font-weight: bold;
+    word-break: break-all;
+    .row {
+        margin-bottom: 10px;
+        flex-wrap: nowrap;
+    }
+    .highlighted {
+        color: @green;
+    }
+    .label {
+        white-space: nowrap;
+        &:after {
+            padding: 0 7px;
+            content: '|';
+        }
+        &:last-child {
+            &:after {
+                content: '';
+            }
+            }
+    }
+}
+
+
+.auther-details {
+  padding-bottom: 40px;
+  height: 150px;
+  overflow: hidden;
+  .auther-details-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 16px;
+      text-align: right;
+    background-color: @grey-bg;
+  }
+  &.show {
+    height: auto;
+  }
+}

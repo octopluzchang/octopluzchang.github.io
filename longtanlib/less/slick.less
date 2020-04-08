@@ -1,9 +1,9 @@
 //Home
-#home-slider {
+.home-slider {
   &.slider {
     background-color: @grey-dark;
     .slide {
-      height: 600px;
+      height: 800px;
       overflow: hidden;
       position: relative;
       .content {
@@ -14,7 +14,10 @@
         width: 100%;
         z-index: 1;
           .text {
-              max-width: 400px;
+              max-width: 635px;
+          }
+          @media @tablet {
+              padding: 10px;
           }
       }
       img {
@@ -22,7 +25,7 @@
         top: 50%;
         transform: translateY(-50%);
         width: 100%;
-        @media @mobile {
+        @media @tablet {
           top: auto;
           transform: translateY(0%);
           left: 50%;
@@ -31,6 +34,9 @@
           width: auto;
         }
       }
+        @media @tablet {
+            height: 100vh;
+        }
     }
   }
     .slick-dots {
@@ -41,10 +47,20 @@
 //Video Slider
 .video-slider {
     background-color: white;
-    padding: 0 20px;
+    margin: 0 30px;
+    margin-top: 20px;
     margin-bottom: 30px;
+    .media iframe {
+        height: 130px;
+    }
 }
 
+
+
+//News scroller
+.news-scroll-bar .slick-slider {
+    
+}
 
 /* Slider */
 

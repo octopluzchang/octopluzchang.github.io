@@ -1,5 +1,240 @@
+@desktop: ~"only screen and (min-width: 1024px)";
+@tablet: ~"only screen and (max-width: 900px)";
+@mobile: ~"only screen and (max-width: 510px)";
+@hd-desktop: ~"only screen and (min-width: 1280px)";
+
+
+
+//Color
+@grey-dark: #1E1E1E;
+@grey-dark-content: #555555;
+@grey-light: #818181;
+@grey-dim: #E4E4E4;
+@grey-bg: #efefef;
+@green: #1ABC9C;
+@orange: #FA7535;
+@orange-bg: #FFF9E7;
+@shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+@black-gradient: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 1) 100%);
+@black-gradient-top: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+@black-gradient-bottom: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+
+
+
+// Transition Mixins
+.liner-transition {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.ease-in-out-transition {
+  -webkit-transition: all 0.5s cubic-bezier(0.42, 0, 0.09, 1.01);
+  -moz-transition: all 0.5s cubic-bezier(0.42, 0, 0.09, 1.01);
+  -o-transition: all 0.5s cubic-bezier(0.42, 0, 0.09, 1.01);
+  transition: all 0.5s cubic-bezier(0.42, 0, 0.09, 1.01);
+}
+
+.slow-fade-in-out {
+  -webkit-transition: all 1.5s cubic-bezier(0.42, 0, 0.09, 1.01);
+  -moz-transition: all 1.5s cubic-bezier(0.42, 0, 0.09, 1.01);
+  -o-transition: all 1.5s cubic-bezier(0.42, 0, 0.09, 1.01);
+  transition: all 1.5s cubic-bezier(0.42, 0, 0.09, 1.01);
+}
+
+.ease-out-transition {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+//Animation keyframes
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes godown {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+}
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+@keyframes jumping {
+  0% {
+    transform: translateY(0)
+  }
+  85% {
+    transform: translateY(0)
+  }
+  100% {
+    transform: translateY(-10%)
+  }
+}
+
+@keyframes moving {
+  0% {
+    transform: translateY(0)
+  }
+  100% {
+    transform: translateY(10%)
+  }
+}
+
+@-webkit-keyframes moving {
+  0% {
+    transform: translateY(0)
+  }
+  100% {
+    transform: translateY(10%)
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    -webkit-transform: scaleY(0.4)
+  }
+  20% {
+    -webkit-transform: scaleY(1.0)
+  }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: PingFangSC-Light, '微軟正黑體';
+  font-size: 20px;
+  background-color: #fcf8f2;
+  margin: 0px;
+  color: #454545;
+  @media @tablet {
+    font-size: 16px;
+  }
+  @media @mobile {
+    font-size: 13px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -11,38 +246,51 @@
   left: 0;
 }
 
+.wrapper {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
+}
+
 #nav-logo {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top left;
   display: inline-block;
   box-sizing: border-box;
-  background-image: url(../assets/img/nav_logo.png);
-  width: 34%;
+  background-image: url(/_res/img/kids/nav_logo.png);
+  width: 30%;
   padding-top: 10%;
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 10px;
+  left: 3%;
   z-index: 6;
-  min-width: 300px;
-  min-height: 100px;
+  min-height: 120px;
+  max-width: 380px;
+  @media @tablet {
+    width: 40%;
+    max-width: 100%;
+  }
   @media @mobile {
     width: 100%;
     left: 0;
-    background-size: 300px 90px;
+    background-size: 300px 90px, 180px;
     min-height: 95px;
     box-shadow: 0px 2px 0px #313131;
     background-color: #ffd26d;
-    background-position: top center;
+      background-image: url(/_res/img/kids/nav_logo.png), url(/_res/img/kids/bg_wood.jpg);
+    background-position: top center, center;
+    background-repeat: no-repeat, repeat;
   }
 }
 
 .nav {
   text-align: right;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: 10px;
+  right: 3%;
   z-index: 5;
   .nav-item {
     width: 11%;
@@ -51,25 +299,53 @@
     background-size: 100%;
     background-position: top left;
     display: inline-block;
+    margin-left: 10px;
+      position: relative;
+      &>span {
+          position: absolute;
+          left: 0;
+          display: inline-block;
+          text-align: center;
+          width: 100%;
+          top: 55%;
+          transform: translateY(-55%) scale(0.8);
+          font-size: 100%;
+          color: #343434;
+          font-weight: bold;
+          white-space: nowrap;
+          text-shadow: rgb(255, 255, 255) 3px 0px 0px, rgb(255, 255, 255) 2.83487px 0.981584px 0px, rgb(255, 255, 255) 2.35766px 1.85511px 0px, rgb(255, 255, 255) 1.62091px 2.52441px 0px, rgb(255, 255, 255) 0.705713px 2.91581px 0px, rgb(255, 255, 255) -0.287171px 2.98622px 0px, rgb(255, 255, 255) -1.24844px 2.72789px 0px, rgb(255, 255, 255) -2.07227px 2.16926px 0px, rgb(255, 255, 255) -2.66798px 1.37182px 0px, rgb(255, 255, 255) -2.96998px 0.42336px 0px, rgb(255, 255, 255) -2.94502px -0.571704px 0px, rgb(255, 255, 255) -2.59586px -1.50383px 0px, rgb(255, 255, 255) -1.96093px -2.27041px 0px, rgb(255, 255, 255) -1.11013px -2.78704px 0px, rgb(255, 255, 255) -0.137119px -2.99686px 0px, rgb(255, 255, 255) 0.850987px -2.87677px 0px, rgb(255, 255, 255) 1.74541px -2.43999px 0px, rgb(255, 255, 255) 2.44769px -1.73459px 0px, rgb(255, 255, 255) 2.88051px -0.838247px 0px;
+          @media @hd-desktop {
+              font-size: 1.8em;
+          }
+          @media @mobile {
+              font-size: 150%;
+          }
+      }
+    &:hover {
+      animation: swing ease-in-out 1s infinite alternate;
+      transform-origin: center -20px;
+    }
     &#item_1 {
-      background-image: url(../assets/img/nav_item_1.png);
+      background-image: url(/_res/img/kids/nav_item_1.png);
     }
     &#item_2 {
-      background-image: url(../assets/img/nav_item_2.png);
+      background-image: url(/_res/img/kids/nav_item_2.png);
     }
     &#item_3 {
-      background-image: url(../assets/img/nav_item_3.png);
+      background-image: url(/_res/img/kids/nav_item_3.png);
     }
     &#item_4 {
-      background-image: url(../assets/img/nav_item_4.png);
+      background-image: url(/_res/img/kids/nav_item_4.png);
     }
     @media @mobile {
       width: 23%;
       padding-top: 26%;
+      margin-left: 0;
     }
   }
   @media @mobile {
     top: 95px;
+    right: 10px;
   }
 }
 
@@ -80,6 +356,7 @@
   transform: translateX(-50%);
   height: 50vh;
   width: 100vw;
+  max-width: 1280px;
   min-width: 600px;
   max-height: 250px;
   min-height: 45%;
@@ -91,8 +368,9 @@
     background-position: center;
     display: inline-block;
     z-index: 3;
+    .ease-in-out-transition;
     &#people_1 {
-      background-image: url(../assets/img/people_1.png);
+      background-image: url(/_res/img/kids/people_1.gif);
       left: 27%;
       bottom: 52%;
       width: 40%;
@@ -102,7 +380,7 @@
       }
     }
     &#people_2 {
-      background-image: url(../assets/img/people_2.png);
+      background-image: url(/_res/img/kids/people_2.png);
       left: 10%;
       top: 13%;
       width: 9%;
@@ -112,7 +390,7 @@
       }
     }
     &#people_3 {
-      background-image: url(../assets/img/people_3.png);
+      background-image: url(/_res/img/kids/people_3.png);
       left: 16%;
       bottom: 9%;
       width: 13%;
@@ -123,7 +401,7 @@
       }
     }
     &#people_4 {
-      background-image: url(../assets/img/people_4.png);
+      background-image: url(/_res/img/kids/people_4.gif);
       left: 39%;
       bottom: 5%;
       width: 15%;
@@ -133,21 +411,21 @@
       }
     }
     &#people_5 {
-      background-image: url(../assets/img/people_5.png);
+      background-image: url(/_res/img/kids/people_5.png);
       left: 61%;
       bottom: 15%;
       width: 9%;
       padding-top: 13%;
     }
     &#people_6 {
-      background-image: url(../assets/img/people_6.png);
+      background-image: url(/_res/img/kids/people_6.png);
       right: 22%;
       bottom: 37%;
       width: 7%;
       padding-top: 13%;
     }
     &#people_7 {
-      background-image: url(../assets/img/people_7.png);
+      background-image: url(/_res/img/kids/people_7.gif);
       right: 5%;
       bottom: 47%;
       width: 15%;
@@ -158,7 +436,7 @@
       }
     }
     &#people_8 {
-      background-image: url(../assets/img/people_8.png);
+      background-image: url(/_res/img/kids/people_8.png);
       left: 82%;
       bottom: 5%;
       width: 6%;
@@ -168,11 +446,12 @@
         bottom: 0%;
       }
     }
-      &:hover {
-          .imagination {
-              opacity: 1;
-          }
-      }
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(0.95);
+    }
   }
   .imagination {
     opacity: 0;
@@ -181,49 +460,57 @@
     background-size: 100%;
     background-position: center;
     display: inline-block;
+    pointer-events: none;
     z-index: 3;
     .ease-in-out-transition;
+    &.show {
+      opacity: 0.8;
+    }
     &#imagination_1 {
-      background-image: url(../assets/img/imagination_1.png);
+      background-image: url(/_res/img/kids/imagination_1.gif);
       left: 27%;
       top: 16%;
       width: 25%;
       padding-top: 25%;
+      animation: moving ease-in-out 1s infinite alternate;
     }
-      &#imagination_3 {
-      background-image: url(../assets/img/imagination_3.png);
+    &#imagination_3 {
+      background-image: url(/_res/img/kids/imagination_3.gif);
       left: 27%;
       top: -120%;
       width: 150%;
       padding-top: 110%;
     }
-      &#imagination_4 {
-      background-image: url(../assets/img/imagination_4.png);
+    &#imagination_4 {
+      background-image: url(/_res/img/kids/imagination_4.gif);
       left: 86%;
       top: -19%;
-      width: 90%;
-      padding-top: 90%;
+      width: 70%;
+      padding-top: 70%;
     }
-      &#imagination_6 {
-      background-image: url(../assets/img/imagination_6.png);
+    &#imagination_6 {
+      background-image: url(/_res/img/kids/imagination_6.gif);
       left: -36%;
       top: -80%;
-      width: 190%;
-      padding-top: 190%;
+      width: 160%;
+      padding-top: 160%;
+      animation: moving ease-in-out 1s infinite alternate;
     }
-      &#imagination_7 {
-      background-image: url(../assets/img/imagination_7.png);
+    &#imagination_7 {
+      background-image: url(/_res/img/kids/imagination_7.gif);
       left: 16%;
       top: -129%;
-      width: 90%;
-      padding-top: 90%;
+      width: 70%;
+      padding-top: 80%;
+      animation: moving ease-in-out 1s infinite alternate;
     }
-      &#imagination_8 {
-      background-image: url(../assets/img/imagination_8.png);
+    &#imagination_8 {
+      background-image: url(/_res/img/kids/imagination_8.gif);
       left: 86%;
       top: 19%;
       width: 190%;
       padding-top: 190%;
+      animation: jumping ease-in-out 0.5s infinite alternate;
     }
   }
   @media @mobile {
@@ -237,8 +524,8 @@
   left: 0;
   height: 50vh;
   width: 100vw;
-  background-image: url(../assets/img/bg_floor.png);
-  background-size: 100%;
+  background-image: url(/_res/img/kids/bg_floor.png);
+  background-size: 1051px;
   background-position: bottom center;
   z-index: 1;
 }
@@ -249,14 +536,15 @@
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
-  padding-top: 50%;
+  padding-top: 40%;
   width: 100%;
-  background-image: url(../assets/img/bg_bookshelfe.png);
+  background-image: url(/_res/img/kids/bg_bookshelfe.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: bottom center;
   min-width: 500px;
-  min-height: 250px;
+  max-width: 1280px;
+  min-height: 201px;
   .item {
     position: absolute;
     background-repeat: no-repeat;
@@ -264,8 +552,9 @@
     background-position: center;
     display: inline-block;
     z-index: 3;
+    .ease-in-out-transition;
     &#biography {
-      background-image: url(../assets/img/item_biography.png);
+      background-image: url(/_res/img/kids/item_biography.png);
       left: 15%;
       top: 34%;
       //max-width: 103px;
@@ -273,21 +562,65 @@
       padding-top: 8%;
     }
     &#board {
-      background-image: url(../assets/img/item_board.png);
+      background-image: url(/_res/img/kids/item_board.png);
       left: 29%;
-      top: 10%;
+      top: 0%;
       //max-width: 221px;
       width: 15%;
       padding-top: 12%;
+      &:hover {
+        animation: swing ease-in-out 1s infinite alternate;
+        transform-origin: center -20px;
+      }
     }
     &#recorder {
-      background-image: url(../assets/img/item_recorder.png);
-      left: 65%;
-      top: 17%;
+      background-image: url(/_res/img/kids/item_recorder.png);
+      left: 74%;
+      top: 11%;
       //max-width: 133px;
       width: 10%;
       padding-top: 15%;
+      &:hover {
+        background-image: url(/_res/img/kids/item_recorder.gif);
+      }
     }
+    &:hover {
+      transform: scale(1.05);
+      .reaction {
+        opacity: 1;
+      }
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+  .reaction {
+    opacity: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    display: inline-block;
+    pointer-events: none;
+    z-index: 3;
+    .ease-in-out-transition;
+    &#reaction_1 {
+      background-image: url(/_res/img/kids/reaction_1.gif);
+      left: -90%;
+      top: 0;
+      width: 120%;
+      padding-top: 90%;
+    }
+    &#reaction_2 {
+      background-image: url(/_res/img/kids/reaction_2.gif);
+      left: 86%;
+      top: -90%;
+      width: 120%;
+      padding-top: 125%;
+    }
+  }
+  @media @hd-desktop {
+    padding-top: 515px;
   }
 }
 
@@ -314,12 +647,262 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: -60%;
+  right: -55%;
+  max-width: 1280px;
   width: 100%;
   height: 100%;
   text-align: right;
-  background-image: url(../assets/img/bg_window.png);
-  background-repeat: repeat-x;
-  background-size: 20% auto;
-  background-position: left 70%;
+  background-image: url(/_res/img/kids/bg_window_l.gif), url(/_res/img/kids/bg_window_r.gif);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 20% auto, 20% auto;
+  background-position: left 70%, 25% 70%;
+  @media @hd-desktop {
+    right: -700px;
+  }
+}
+
+#board-container {
+  padding: 0 10px;
+  padding-top: 10%;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  @media @mobile {
+    padding-top: 20%;
+  }
+  @media @mobile {
+    padding-top: 50%;
+  }
+}
+
+#board-top {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 125px;
+  width: 100%;
+  padding: 0 2.5em;
+  position: relative;
+  background-image: url(/_res/img/kids/bg_board_top.png);
+  @media @tablet {
+    padding: 50px 30px;
+  }
+  @media @mobile {
+    padding: 20px 1.5em;
+  }
+}
+
+#board-body {
+  background-position: top;
+  background-image: url(/_res/img/kids/bg_board_body.png);
+  background-size: 100%;
+  background-repeat: repeat-y;
+  width: 100%;
+  padding: 0.5em 2.5em 5em;
+  min-height: 100vh;
+  #main {
+    width: 50%;
+    display: inline-block;
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+  #side {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 50px;
+    img {
+      width: 100%;
+    }
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+      padding-left: 0px;
+    }
+  }
+  @media @tablet {
+    padding: 50px 30px;
+  }
+  @media @mobile {
+    padding: 0.5em 1.5em;
+  }
+}
+
+.title {
+  width: 100%;
+  padding-top: 10%;
+  position: relative;
+  margin: 20px 0;
+  margin-bottom: 50px;
+  .badge {
+    position: absolute;
+    top: 0;
+    left: -1em;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0.5em 0.85em;
+    font-size: 2em;
+    background-image: url(/_res/img/kids/bg_wood.jpg);
+    box-shadow: 0px 5px 0px #F9990F;
+    color: #7B512F;
+  }
+}
+
+.badge {
+  font-size: 1em;
+  padding: 0.85em 1.25em;
+  background-color: #313131;
+  color: white;
+  display: inline-block;
+  border-radius: 60px;
+  margin-bottom: 1em;
+  white-space: nowrap;
+  font-weight: bold;
+  &.event {
+    background-color: #FD1F53;
+  }
+  &.teng-yu-hsien {
+    background-color: #3FCA57;
+  }
+  &.history {
+    background-color: #5284EF;
+  }
+}
+
+.event-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  @media @tablet {
+    display: block;
+  }
+}
+.event-card {
+  box-sizing: border-box;
+  position: relative;
+  background-color: white;
+  width: 100%;
+  display: inline-block;
+  .event-thumbnail {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+    padding-bottom: 44%;
+    .mask {
+      position: absolute;
+      width: 100%;
+      height: 20%;
+      bottom: 0;
+      z-index: 1;
+      background: @black-gradient-bottom;
+    }
+  }
+  .event-content {
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 1em;
+    color: white;
+    width: 100%;
+      overflow: hidden;
+    font-weight: bold;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 49% 50%;
+    .event-title {
+      padding-right: 25px;
+      h3 {
+        font-size: 1.13em;
+        font-weight: bold;
+        text-shadow: 4px 4px 11px rgba(0, 0, 0, 1);
+        line-height: 1.5em;
+      }
+    }
+    .event-excerpt {
+      font-size: 1em;
+    }
+    .event-time {
+      background-color: @green;
+      padding: 0.33em 1.733em;
+      margin-bottom: 10px;
+      font-size: 0.8em;
+      display: inline-block;
+    }
+  }
+  .event-url {
+    z-index: 2;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: inline-block;
+    background-image: url(/_res/img/ic_read_more.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right center;
+    padding-right: 20px;
+      color: @orange;
+  }
+  .event-excerpt {
+    color: @grey-dark;
+    padding: 10px;
+    padding-right: 20px;
+      padding-top: 0px;
+      overflow: hidden;
+      max-height: 300px;
+    @media @mobile {
+      padding: 0px;
+      padding-right: 10px;
+    }
+  }
+}
+
+
+footer {
+  padding-top: 13%;
+  width: 100%;
+  background-image: url(/_res/img/kids/bg_floor.png);
+  background-size: 1100px;
+  background-position: bottom center;
+  position: relative;
+  @media only screen and (min-width: 1400px) {
+    padding-top: 170px;
+  }
+  @media @tablet {
+    padding-top: 140px;
+  }
+}
+
+.footer-content {
+  background-image: url(/_res/img/kids/bg_footer.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  width: 100%;
+  padding-top: 16%;
+  margin: 0 auto;
+  position: absolute;
+  margin-left: -50%;
+  left: 50%;
+  bottom: 0px;
+  min-height: 300px;
+  max-width: 1300px;
+  @media @tablet {
+    background-size: 1100px;
+    background-position: bottom left;
+    max-width: 806px;
+  }
+  @media @mobile {
+    background-size: 1100px;
+    padding-top: 140px;
+    width: 300px;
+    margin-left: 0px;
+    left: 0px;
+  }
 }

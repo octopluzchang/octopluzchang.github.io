@@ -1,0 +1,71 @@
+.timeline {
+  .row {
+    margin-bottom: 0;
+  }
+  .col {
+    border-left: 1px solid @grey-light;
+    padding: 0px;
+    .date-content {
+      border-left: 6px solid @orange;
+      margin-bottom: 20px;
+      padding-left: 10px;
+        font-weight: bold;
+    }
+  }
+  .title {
+    padding-right: 10px !important;
+    padding-bottom: 20px;
+    font-weight: bold;
+  }
+  .year-title {
+    font-size: 2em;
+  }
+  .month-title {
+    font-size: 1.33em;
+  }
+  .date-title {
+    font-size: 0.8em;
+  }
+  .date-event {
+    font-size: 1.33em;
+  }
+  .song-title {
+    font-size: 1em;
+  }
+  .song-intro {
+    background-color: @orange-bg;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  .song-intro-switch {
+    display: inline-block;
+    padding-right: 15px;
+    background-image: url(/_res/img/ic_collapse_small.png);
+    background-size: 10px;
+    background-position: right;
+    background-repeat: no-repeat;
+    &.active {
+      background-image: url(/_res/img/ic_collapse_small_highlighted.png);
+    }
+  }
+}
+
+@media @tablet {
+  #menu {
+    display: none;
+  }
+  .timeline {
+    padding: 0!important;
+    .col {
+      padding-left: 0 !important;
+      border-left: none;
+    }
+    .date-content {
+      margin-top: 30px;
+    }
+  }
+  .title {
+    max-width: 0px;
+    white-space: nowrap;
+  }
+}

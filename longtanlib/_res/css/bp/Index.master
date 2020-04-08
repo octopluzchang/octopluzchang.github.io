@@ -1,0 +1,149 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Index.master.cs" Inherits="_res_master_Index" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet/less" type="text/css" href="/_res/ext/less/config.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav id="navbar" class="home navbar navbar-expand-md">
+        <div class="container">
+            <div class="navbar-brand" href="/">
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <img alt="圖片說明" src="/_res/img/ic_menu_w.png">
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">回首頁</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">最新消息</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/news/news_list.aspx">最新消息</a>
+                            <a class="dropdown-item" href="/event/event_list.aspx">活動資訊</a>
+                            <a class="dropdown-item" href="/book/book_list.aspx">新書上架</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">專題介紹</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/topic/topic_list.aspx?c=人物故事">人物故事</a>
+                            <a class="dropdown-item" href="/topic/topic_list.aspx?c=音樂傳唱">音樂傳唱</a>
+                            <a class="dropdown-item" href="/topic/topic_list.aspx?c=專題講座">專題講座</a>
+                            <a class="dropdown-item" href="/video_list.aspx">影音頻道</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">黃金年代</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/age/interval.aspx">黃金年代</a>
+                            <a class="dropdown-item" href="/age/Biography.aspx">鄧雨賢</a>
+                            <a class="dropdown-item" href="/collection/collection_list.aspx">數位典藏音樂</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">WOW!龍潭圖書館</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/intro/about.aspx">關於龍潭圖書館</a>
+                            <a class="dropdown-item" href="/intro/floors.aspx">空間導覽</a>
+                            <a class="dropdown-item" href="/intro/building.aspx">綠建築介紹</a>
+                            <a class="dropdown-item" href="/intro/scenery.aspx">周邊景觀</a>
+                        </div>
+                    </li>
+                    <div class="nav-group">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">中文</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                <a class="dropdown-item" href="#">English</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/kids/">兒童版</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="filled">聯絡資訊</h4>
+                    <ul class="list-unstyled">
+                        <li class="row">
+                            <div class="col col-2 title">地址</div>
+                            <div class="col content">
+                                <div>桃園市龍潭區中興路 680 號</div>
+                                <a href="https://goo.gl/maps/ifY3D8jSUqM2" target="_blank">查看地圖</a>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div class="col col-2 title">電話</div>
+                            <div class="col content">
+                                <div>03 4794544</div>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <div class="col col-2 title">傳真</div>
+                            <div class="col content">
+                                <div>03 4708697</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="filled">網站說明</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="/privacy.aspx">隱私權條款</a></li>
+                        <li><a href="/copyright.aspx">著作權聲明</a></li>
+                        <li><a href="/intro/community.aspx">社區介紹</a></li>
+                        <li><a href="/Sitemap.aspx">網站地圖</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-4">
+                    <h4 class="filled">友站連結</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.typl.gov.tw/" target="_blank">桃園市立圖書館總館</a></li>
+                        <li><a href="https://www.sinica.edu.tw/" target="_blank">中央研究院</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="copyright-bar" class="text-muted row">
+                <div class="col-sm-1">
+                    <img alt="桃園市立圖書館龍潭分館" src="/_res/img/ic_logo_footer.png">
+                </div>
+                <div class="col-sm-11">
+                    <small>© 2018 桃園市立圖書館龍潭分館 版權所有</small>
+                    <br>
+                    <small>建議使用 Chrome 65/ Firebox 65/ Safari 11 / Internet Explorer 11 / Microsoft Edge 42 以及更新版本的瀏覽器</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/_res/js/less.js"></script>
+    <script src="/_res/js/jquery.js"></script>
+    <script src="/_res/ext/slick/slick.min.js"></script>
+    <script src="/_res/js/bootstrap.js"></script>
+    <script src="/_res/js/fancybox.js"></script>
+
+    <script src="/_res/js/mos.js"></script>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder_JS" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+
+</html>

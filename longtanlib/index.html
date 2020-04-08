@@ -2,15 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+ <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="../../../../favicon.ico">
-
   <title>桃園市立龍潭圖書館 | 最新消息</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-  <link rel="stylesheet/less" type="text/css" href="./less/config.less" />
+  <link rel="stylesheet/less" href="/less/config.less" />
+<!--  <link rel="stylesheet" href="/_res/css/style.css" />-->
 </head>
 
 
@@ -21,52 +17,62 @@
       <div class="navbar-brand" href="index.html">
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="assets/img/ic_menu_w.png">
+        <img src="/_res/img/ic_menu_w.png">
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.html">回首頁</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="event_list.html">最新消息</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">專題故事</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">數位典藏</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">黃金年代</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="intro_floors.html">WOW!龍潭圖書館</a>
+          <li class="nav-item">
+            <a class="nav-link" href="show_list.html">活動資訊</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">中文</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">英文</a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">數位影音</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="collection_list.html">數位典藏音樂</a>
+              <a class="dropdown-item" href="video_list.html">影音頻道</a>
             </div>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">鄧雨賢</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="golden_ages.html">黃金年代</a>
+          </li>
+          <div class="nav-group">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">中文</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                  <a class="dropdown-item" href="#">英文</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="kids/">兒童版</a>
+              </li>
+          </div>
         </ul>
       </div>
     </div>
   </nav>
-  <div id="home-slider" class="slider">
+  <div class="slider home-slider">
     <div class="slide">
       <div class="content">
         <div class="container">
           <div class="text">
             <h1><strong>2018 桃園鍾肇政文學獎徵文倒數</strong></h1>
-            <h3>總獎金為新台幣 200 萬元，得獎者還有機會獲得亞洲地區來回機票</h3>
+            <h2>總獎金為新台幣 200 萬元，得獎者還有機會獲得亞洲地區來回機票</h2>
             <button>詳細內容</button>
           </div>
         </div>
       </div>
-      <img src="assets/lib/home-slide-1.jpg">
+      <img alt="圖片說明" src="assets/lib/home-slide-1.jpg">
     </div>
+<!--
     <div class="slide">
       <div class="content">
         <div class="container">
@@ -76,149 +82,187 @@
           </div>
         </div>
       </div>
-      <img src="assets/lib/home-slide-2.jpg">
+      <img alt="圖片說明" src="assets/lib/home-slide-2.jpg">
     </div>
+-->
   </div>
   <div class="container">
     <div class="news-scroll-bar">
       <div class="title">新訊速報</div>
-      <div class="content">兒童文學作家傅林統現身桃園市兒童文學館6/9帶給小朋友動物國童話故事</div>
+      <div class="content">
+          <div>兒童文學作家傅林統現身桃園市兒童文學館6/9帶給小朋友動物國童話故事</div>
+          <div>news2</div>
+          <div>news3</div>
+    </div>
     </div>
     <div class="row">
-      <div class="col-md-7">
+      <div class="col-md-8">
         <div class="media featured">
-          <iframe src="https://www.youtube.com/embed/Cd0JH1AreDw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+         <div id="video-1" class="video-player"></div>
+          <div class="video-thumbnail">
+                <img alt="圖片說明" src="http://img.youtube.com/vi/Cd0JH1AreDw/0.jpg" class="thumbnail"/>
+            </div>
+            
           <div class="media-body">
-            <small><span>2018/4/5</span> | <span class="tag">人物故事</span></small>
-            <h2><a href="javascript:;" class="mt-0 mb-1">擅長批判性思考的推理作家</a> </h2>
+           <div class="Btn_play_video">
+                <img alt="圖片說明" src="assets/img/ic_video_play_btn.png">
+            </div>
+            <div>
+                <small><span>2018/4/5</span><span class="tag">人物故事</span></small>
+                <h3><a href="javascript:;" class="mt-0 mb-1">擅長批判性思考的推理作家</a> </h3>
+            </div>
           </div>
         </div>
         <div class="video-slider slider">
           <div class="media">
-            <iframe src="https://www.youtube.com/embed/Un2yBgIAxYs?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+           <div id="video-2" class="video-player"></div>
+            <div class="video-thumbnail">
+                <img alt="圖片說明" src="http://img.youtube.com/vi/JXjgFrO07-M/0.jpg" class="thumbnail"/>
+            </div>
             <div class="media-body">
-              <small><span>2018/4/5</span> | <span class="tag">人物故事</span></small>
+             <div class="Btn_play_video">
+                <img alt="圖片說明" src="assets/img/ic_video_play_btn.png">
+            </div>
+              <small><span>2016/4/5</span><span class="tag">人物故事</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">擅長批判性思考的推理作家</a> </p>
             </div>
           </div>
           <div class="media">
-            <iframe src="https://www.youtube.com/embed/JnfBXjWm7hc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+           <div id="video-3" class="video-player"></div>
+            <div class="video-thumbnail">
+                <img alt="圖片說明" src="http://img.youtube.com/vi/AEKy1AS75Zs/0.jpg" class="thumbnail"/>
+            </div>
             <div class="media-body">
-              <small><span>2018/4/5</span> | <span class="tag">人物故事</span></small>
+             <div class="Btn_play_video">
+                <img alt="圖片說明" src="assets/img/ic_video_play_btn.png">
+            </div>
+              <small><span>2018/4/5</span><span class="tag">人物故事</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">擅長批判性思考的推理作家</a> </p>
             </div>
           </div>
           <div class="media">
-            <iframe src="https://www.youtube.com/embed/UxLRv0FEndM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+           <div id="video-4" class="video-player"></div>
+            <div class="video-thumbnail">
+                <img alt="圖片說明" src="http://img.youtube.com/vi/-WLHr1_EVtQ/0.jpg" class="thumbnail"/>
+            </div>
             <div class="media-body">
-              <small><span>2018/4/5</span> | <span class="tag">人物故事</span></small>
+             <div class="Btn_play_video">
+                <img alt="圖片說明" src="assets/img/ic_video_play_btn.png">
+            </div>
+              <small><span>2018/4/5</span><span class="tag">人物故事</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">擅長批判性思考的推理作家</a> </p>
             </div>
           </div>
           <div class="media">
-            <iframe src="https://www.youtube.com/embed/cgxZ4H3gJ8c?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+           <div id="video-5" class="video-player"></div>
+            <div class="video-thumbnail">
+                <img alt="圖片說明" src="http://img.youtube.com/vi/e4PTvXtz4GM/0.jpg" class="thumbnail"/>
+            </div>
             <div class="media-body">
-              <small><span>2018/4/5</span> | <span class="tag">人物故事</span></small>
+             <div class="Btn_play_video">
+                <img alt="圖片說明" src="assets/img/ic_video_play_btn.png">
+            </div>
+              <small><span>2018/4/5</span><span class="tag">人物故事</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">擅長批判性思考的推理作家</a> </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-4">
         <div class="tab-container">
           <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" id="pills-recommended-tab" data-toggle="pill" href="#pills-recommended" role="tab" aria-controls="pills-recommended" aria-selected="true">小編推薦</a>
+              <a class="nav-link active dark" id="pills-recommended-tab" data-toggle="pill" href="#pills-recommended" role="tab" aria-controls="pills-recommended" aria-selected="true">小編推薦</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="pills-history-tab" data-toggle="pill" href="#pills-history" role="tab" aria-controls="pills-history" aria-selected="false">歷史回顧</a>
+              <a class="nav-link dark" id="pills-history-tab" data-toggle="pill" href="#pills-history" role="tab" aria-controls="pills-history" aria-selected="false">歷史回顧</a>
             </li>
           </ul>
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-recommended" role="tabpanel" aria-labelledby="pills-recommended-tab">
               <li class="media">
-                <img class="mr-3 img-thumbnail small" src="assets/lib/media-3.jpg">
+                <img alt="圖片說明" class="mr-3 img-thumbnail small" src="assets/lib/media-3.jpg">
                 <div class="media-body">
-                  <small><span>2018/4/5</span> | <span class="tag">人物故事</span></small>
+                  <small><span>2018/4/5</span><span class="tag">人物故事</span></small>
                   <p><a href="javascript:;" class="mt-0 mb-1">擅長批判性思考的推理作家</a> </p>
                 </div>
               </li>
               <li class="media">
-                <img class="mr-3 img-thumbnail small" src="assets/lib/media-1.jpg">
+                <img alt="圖片說明" class="mr-3 img-thumbnail small" src="assets/lib/media-1.jpg">
                 <div class="media-body">
-                  <small><span>2018/4/5</span> | <span class="tag">專題講座</span></small>
+                  <small><span>2018/4/5</span><span class="tag">專題講座</span></small>
                   <p><a href="javascript:;" class="mt-0 mb-1">風入松、急三槍</a> </p>
                 </div>
               </li>
               <li class="media">
-                <img class="mr-3 img-thumbnail small" src="assets/lib/media-2.jpg">
+                <img alt="圖片說明" class="mr-3 img-thumbnail small" src="assets/lib/media-2.jpg">
                 <div class="media-body">
-                  <small><span>2018/4/5</span> | <span class="tag">專題講座</span></small>
+                  <small><span>2018/4/5</span><span class="tag">專題講座</span></small>
                   <p><a href="javascript:;" class="mt-0 mb-1">一分鐘讓你愛上閱讀</a> </p>
                 </div>
               </li>
               <li class="media">
-                <img class="mr-3 img-thumbnail small" src="assets/lib/media-3.jpg">
+                <img alt="圖片說明" class="mr-3 img-thumbnail small" src="assets/lib/media-3.jpg">
                 <div class="media-body">
-                  <small><span>2018/4/5</span> | <span class="tag">人物故事</span></small>
+                  <small><span>2018/4/5</span><span class="tag">人物故事</span></small>
                   <p><a href="javascript:;" class="mt-0 mb-1">擅長批判性思考的推理作家</a> </p>
                 </div>
               </li>
               <li class="media">
-                <img class="mr-3 img-thumbnail small" src="assets/lib/media-1.jpg">
+                <img alt="圖片說明" class="mr-3 img-thumbnail small" src="assets/lib/media-1.jpg">
                 <div class="media-body">
-                  <small><span>2018/4/5</span> | <span class="tag">專題講座</span></small>
+                  <small><span>2018/4/5</span><span class="tag">專題講座</span></small>
                   <p><a href="javascript:;" class="mt-0 mb-1">風入松、急三槍</a> </p>
                 </div>
               </li>
               <li class="media">
-                <img class="mr-3 img-thumbnail small" src="assets/lib/media-2.jpg">
+                <img alt="圖片說明" class="mr-3 img-thumbnail small" src="assets/lib/media-2.jpg">
                 <div class="media-body">
-                  <small><span>2018/4/5</span> | <span class="tag">專題講座</span></small>
+                  <small><span>2018/4/5</span><span class="tag">專題講座</span></small>
                   <p><a href="javascript:;" class="mt-0 mb-1">一分鐘讓你愛上閱讀</a> </p>
                 </div>
               </li>
             </div>
             <div class="tab-pane fade" id="pills-history" role="tabpanel" aria-labelledby="pills-history-tab">
               <li class="media">
-                <img class="mr-3 img-thumbnail small" src="assets/lib/media-1.jpg">
+                <img alt="圖片說明" class="mr-3 img-thumbnail small" src="assets/lib/media-1.jpg">
                 <div class="media-body">
-                  <small><span>2018/4/5</span> | <span class="tag">專題講座</span></small>
+                  <small><span>2018/4/5</span><span class="tag">專題講座</span></small>
                   <p><a href="javascript:;" class="mt-0 mb-1">風入松、急三槍</a> </p>
                 </div>
               </li>
               <li class="media">
-                <img class="mr-3 img-thumbnail small" src="assets/lib/media-2.jpg">
+                <img alt="圖片說明" class="mr-3 img-thumbnail small" src="assets/lib/media-2.jpg">
                 <div class="media-body">
-                  <small><span>2018/4/5</span> | <span class="tag">專題講座</span></small>
+                  <small><span>2018/4/5</span><span class="tag">專題講座</span></small>
                   <p><a href="javascript:;" class="mt-0 mb-1">一分鐘讓你愛上閱讀</a> </p>
                 </div>
               </li>
               <li class="media">
-                <img class="mr-3 img-thumbnail small" src="assets/lib/media-3.jpg">
+                <img alt="圖片說明" class="mr-3 img-thumbnail small" src="assets/lib/media-3.jpg">
                 <div class="media-body">
-                  <small><span>2018/4/5</span> | <span class="tag">人物故事</span></small>
+                  <small><span>2018/4/5</span><span class="tag">人物故事</span></small>
                   <p><a href="javascript:;" class="mt-0 mb-1">擅長批判性思考的推理作家</a> </p>
                 </div>
               </li>
               <li class="media">
-                <img class="mr-3 img-thumbnail small" src="assets/lib/media-1.jpg">
+                <img alt="圖片說明" class="mr-3 img-thumbnail small" src="assets/lib/media-1.jpg">
                 <div class="media-body">
-                  <small><span>2018/4/5</span> | <span class="tag">專題講座</span></small>
+                  <small><span>2018/4/5</span><span class="tag">專題講座</span></small>
                   <p><a href="javascript:;" class="mt-0 mb-1">風入松、急三槍</a> </p>
                 </div>
               </li>
               <li class="media">
-                <img class="mr-3 img-thumbnail small" src="assets/lib/media-2.jpg">
+                <img alt="圖片說明" class="mr-3 img-thumbnail small" src="assets/lib/media-2.jpg">
                 <div class="media-body">
-                  <small><span>2018/4/5</span> | <span class="tag">專題講座</span></small>
+                  <small><span>2018/4/5</span><span class="tag">專題講座</span></small>
                   <p><a href="javascript:;" class="mt-0 mb-1">一分鐘讓你愛上閱讀</a> </p>
                 </div>
               </li>
               <li class="media">
-                <img class="mr-3 img-thumbnail small" src="assets/lib/media-3.jpg">
+                <img alt="圖片說明" class="mr-3 img-thumbnail small" src="assets/lib/media-3.jpg">
                 <div class="media-body">
-                  <small><span>2018/4/5</span> | <span class="tag">人物故事</span></small>
+                  <small><span>2018/4/5</span><span class="tag">人物故事</span></small>
                   <p><a href="javascript:;" class="mt-0 mb-1">擅長批判性思考的推理作家</a> </p>
                 </div>
               </li>
@@ -232,29 +276,29 @@
         <div class="feature-list-container">
           <div class="header">
             <p class="title">現代藝術藝廊</p>
-            <img src="assets/lib/feature-cover-1.jpg">
+            <img alt="圖片說明" src="assets/lib/feature-cover-1.jpg">
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 2018/4/23</span></small>
-              <p><a href="javascript:;" class="mt-0 mb-1">2018工業包裝設計展</a> </p>
+              <small class="light"><span>2018/4/5 - 2018/4/23</span></small>
+              <p><a href="javascript:;" class="mt-0 mb-1">2018工業包裝設計展2018工業包裝設計展</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 2018/4/23</span></small>
+              <small class="light"><span>2018/4/5 - 2018/4/23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018車與品味博覽會</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 2018/4/23</span></small>
+              <small class="light"><span>2018/4/5 - 2018/4/23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018桃園葡萄酒展</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 2018/4/23</span></small>
+              <small class="light"><span>2018/4/5 - 2018/4/23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018現代居家設計展</a> </p>
             </div>
           </div>
@@ -267,29 +311,29 @@
         <div class="feature-list-container">
           <div class="header">
             <p class="title">龍潭陂廳</p>
-            <img src="assets/lib/feature-cover-2.jpg">
+            <img alt="圖片說明" src="assets/lib/feature-cover-2.jpg">
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 23</span></small>
+              <small class="light"><span>2018/4/5 - 23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018工業包裝設計展</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 23</span></small>
+              <small class="light"><span>2018/4/5 - 23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018車與品味博覽會</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 23</span></small>
+              <small class="light"><span>2018/4/5 - 23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018桃園葡萄酒展</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 23</span></small>
+              <small class="light"><span>2018/4/5 - 23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018現代居家設計展</a> </p>
             </div>
           </div>
@@ -302,29 +346,29 @@
         <div class="feature-list-container">
           <div class="header">
             <p class="title">黃泥塘廳</p>
-            <img src="assets/lib/feature-cover-3.jpg">
+            <img alt="圖片說明" src="assets/lib/feature-cover-3.jpg">
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 23</span></small>
+              <small class="light"><span>2018/4/5 - 23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018工業包裝設計展</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 23</span></small>
+              <small class="light"><span>2018/4/5 - 23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018車與品味博覽會</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 23</span></small>
+              <small class="light"><span>2018/4/5 - 23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018桃園葡萄酒展</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 23</span></small>
+              <small class="light"><span>2018/4/5 - 23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018現代居家設計展</a> </p>
             </div>
           </div>
@@ -337,29 +381,29 @@
         <div class="feature-list-container">
           <div class="header">
             <p class="title">烏樹林廳</p>
-            <img src="assets/lib/feature-cover-4.jpg">
+            <img alt="圖片說明" src="assets/lib/feature-cover-4.jpg">
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 23</span></small>
+              <small class="light"><span>2018/4/5 - 23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018工業包裝設計展</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 23</span></small>
+              <small class="light"><span>2018/4/5 - 23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018車與品味博覽會</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 23</span></small>
+              <small class="light"><span>2018/4/5 - 23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018桃園葡萄酒展</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>2018/4/5 - 23</span></small>
+              <small class="light"><span>2018/4/5 - 23</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">2018現代居家設計展</a> </p>
             </div>
           </div>
@@ -372,34 +416,34 @@
         <div class="feature-list-container">
           <div class="header">
             <p class="title">新書上架</p>
-            <img src="assets/lib/media-3.jpg">
+            <img alt="圖片說明" src="assets/lib/media-3.jpg">
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>張曼娟</span></small>
+              <small class="light"><span>張曼娟</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">寫給中年人的情書</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>不朽</span></small>
+              <small class="light"><span>不朽</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">想把餘生的溫柔都給你</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>施純傑</span></small>
+              <small class="light"><span>施純傑</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">台海狂想曲</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>余光中</span></small>
+              <small class="light"><span>余光中</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">從杜甫到達利</a> </p>
             </div>
           </div>
           <div class="footer">
-            <a href="javascript:;" class="mt-0 mb-1">更多資訊</a>
+            <a href="book_list.html" class="mt-0 mb-1">更多資訊</a>
           </div>
         </div>
       </div>
@@ -407,29 +451,29 @@
         <div class="feature-list-container">
           <div class="header">
             <p class="title">人物故事</p>
-            <img src="assets/lib/media-4.jpg">
+            <img alt="圖片說明" src="assets/lib/media-4.jpg">
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>張曼娟</span></small>
+              <small class="light"><span>張曼娟</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">寫給中年人的情書</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>不朽</span></small>
+              <small class="light"><span>不朽</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">想把餘生的溫柔都給你</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>施純傑</span></small>
+              <small class="light"><span>施純傑</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">台海狂想曲</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>余光中</span></small>
+              <small class="light"><span>余光中</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">從杜甫到達利</a> </p>
             </div>
           </div>
@@ -442,29 +486,29 @@
         <div class="feature-list-container">
           <div class="header">
             <p class="title">音樂傳唱</p>
-            <img src="assets/lib/media-5.jpg">
+            <img alt="圖片說明" src="assets/lib/media-5.jpg">
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>張曼娟</span></small>
+              <small class="light"><span>張曼娟</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">寫給中年人的情書</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>不朽</span></small>
+              <small class="light"><span>不朽</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">想把餘生的溫柔都給你</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>施純傑</span></small>
+              <small class="light"><span>施純傑</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">台海狂想曲</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>余光中</span></small>
+              <small class="light"><span>余光中</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">從杜甫到達利</a> </p>
             </div>
           </div>
@@ -477,34 +521,34 @@
         <div class="feature-list-container">
           <div class="header">
             <p class="title">WOW龍潭圖書館</p>
-            <img src="assets/lib/feature-cover-5.jpg">
+            <img alt="圖片說明" src="assets/lib/feature-cover-5.jpg">
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>張曼娟</span></small>
+              <small class="light"><span>張曼娟</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">寫給中年人的情書</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>不朽</span></small>
+              <small class="light"><span>不朽</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">想把餘生的溫柔都給你</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>施純傑</span></small>
+              <small class="light"><span>施純傑</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">台海狂想曲</a> </p>
             </div>
           </div>
           <div class="media">
             <div class="media-body">
-              <small><span>余光中</span></small>
+              <small class="light"><span>余光中</span></small>
               <p><a href="javascript:;" class="mt-0 mb-1">從杜甫到達利</a> </p>
             </div>
           </div>
           <div class="footer">
-            <a href="javascript:;" class="mt-0 mb-1">更多資訊</a>
+            <a href="intro_floors.html" class="mt-0 mb-1">更多資訊</a>
           </div>
         </div>
       </div>
@@ -522,7 +566,7 @@
               <small class="event-time">2018/11/4</small>
               <h3>「愛旅行，看見幸福故事」~~公共圖書館亮點櫥窗展</h3>
             </div>
-            <p class="event-excerpt">雲林縣斗六市繪本圖書館是全臺第一座專為兒童設計的繪本圖書館，結合西方童話及在地文化特色，營造溫馨溫暖的閱讀環境，讓親子享受閱讀的樂趣；並培養孩子思考、想像及閱讀習慣。</p>
+            <p class="event-excerpt">雲林縣斗六市繪本圖書館是全臺第一座專為兒童設計的繪本圖書館，結合西方童話及在地文化特色...</p>
           </div>
           <a href="#" class="event-url">繼續閱讀</a>
         </div>
@@ -574,26 +618,32 @@
         <div id="open-time-list">
             <div class="media">
               <div class="media-body">
-                <h6><strong><span class="tag">週一至週五</span></strong></h6>
-                <h3><strong>9:00 - 22:00</strong></h3>
+                <h6><span class="tag">週一至週五</span></h6>
+                <h3>9:00 - 22:00</h3>
               </div>
               <div class="media-body">
-                <h6><strong><span class="tag">週一至週五</span></strong></h6>
-                <h3><strong>9:00 - 22:00</strong></h3>
+                <h6><span class="tag">週末與國定假日</span></h6>
+                <h3>9:00 - 17:00</h3>
               </div>
             </div>
             <div class="media">
-              <img class="mr-3 img-thumbnail small" src="assets/img/bg_close.png">
+              <img alt="圖片說明" class="mr-3 img-thumbnail small" src="assets/img/bg_close.png">
               <div class="media-body">
-                <h6><span class="tag"><strong>最近的休館時間</strong></span></h6>
-                  <h3><strong>7月20日 星期五</strong></h3>
+                <h6><span class="tag">最近的休館時間</span></h6>
+                  <h3>7月20日 星期五</h3>
               </div>
+              <a href="#" class="Btn_readMore">
+                <img alt="圖片說明" src="assets/img/ic_read_more.png">
+            </a>
             </div>
+            
         </div>
-        <img src="assets/lib/banner_x_001.jpg" class="img-thumbnail">
-        <img src="assets/lib/banner_x_002.jpg" class="img-thumbnail">
-        <img src="assets/lib/banner_x_003.jpg" class="img-thumbnail">
-        <img src="assets/lib/banner_x_004.jpg" class="img-thumbnail">
+        <div class="ad-banners">
+            <a href="#"><img alt="圖片說明" src="assets/lib/banner_x_001.jpg" class="img-thumbnail"></a>
+            <a href="#"><img alt="圖片說明" src="assets/lib/banner_x_002.jpg" class="img-thumbnail"></a>
+            <a href="#"><img alt="圖片說明" src="assets/lib/banner_x_003.jpg" class="img-thumbnail"></a>
+            <a href="#"><img alt="圖片說明" src="assets/lib/banner_x_004.jpg" class="img-thumbnail"></a>
+        </div>
       </div>
 
     </div>
@@ -605,20 +655,20 @@
           <h4 class="filled">聯絡資訊</h4>
           <ul class="list-unstyled">
             <li class="row">
-              <div class="col col-3">地址</div>
+              <div class="col col-2 title">地址</div>
               <div class="col content">
                 <div>桃園市龍潭區中興路 680 號</div>
                 <a href="https://goo.gl/maps/ifY3D8jSUqM2">查看地圖</a>
               </div>
             </li>
             <li class="row">
-              <div class="col col-3">電話</div>
+              <div class="col col-2 title">電話</div>
               <div class="col content">
                 <div>03 4794544</div>
               </div>
             </li>
             <li class="row">
-              <div class="col col-3">傳真</div>
+              <div class="col col-2 title">傳真</div>
               <div class="col content">
                 <div>03 4708697</div>
               </div>
@@ -630,6 +680,8 @@
           <ul class="list-unstyled">
             <li><a href="javascript:;">隱私權條款</a></li>
             <li><a href="javascript:;">著作權聲明</a></li>
+            <li><a href="javascript:;">網站地圖</a></li>
+            <li><a href="javascript:;">社區介紹</a></li>
           </ul>
 
         </div>
@@ -644,7 +696,7 @@
       </div>
       <div id="copyright-bar" class="text-muted row">
         <div class="col-sm-1">
-          <img src="assets/img/ic_logo_footer.png">
+          <img alt="圖片說明" src="assets/img/ic_logo_footer.png">
         </div>
         <div class="col-sm-11">
           <small>© 2018 桃園市立圖書館龍潭分館 版權所有</small>
@@ -654,13 +706,15 @@
       </div>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./assets/js/less.js"></script>
+  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/slick/slick.min.js"></script>
+  <script src="./assets/js/bootstrap.js"></script>
+  <script src="./assets/js/fancybox.js"></script>
+  <script src="assets/js/youtube.js"></script>
 </body>
 <script>
-  $('#home-slider').slick({
+  $('.home-slider').slick({
     arrows: true,
     autoplay: true,
     dots: true
@@ -671,20 +725,14 @@
     dots: true,
     lazyLoad: 'ondemand'
   });
-
-  //  //Navigation Bar Shrink on scroll
-  //  $(window).scroll(function() {
-  //    header()
-  //  }).scroll();
-  //
-  //  function header() {
-  //    var scrolled = $(window).scrollTop();
-  //    if (scrolled > 600) {
-  //      $('#navbar').removeClass('home')
-  //    } else {
-  //      $('#navbar').addClass('home')
-  //    }
-  //  }
+    $('.news-scroll-bar .content').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: false,
+    dots: false,
+    lazyLoad: 'ondemand'
+  });
 </script>
 
 </html>

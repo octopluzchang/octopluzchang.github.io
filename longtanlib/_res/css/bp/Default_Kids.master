@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default_Kids.master.cs" Inherits="_res_master_Default_Kids" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/_res/imgfavicon.ico" />
+
+
+    <link rel="stylesheet/less" type="text/css" href="/_res/ext/less/kids/config.less" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/kids/" id="nav-logo"></a>
+        <div class="nav">
+            <a href="event_list.aspx" id="item_1" class="nav-item"></a>
+            <a href="history.aspx" id="item_2" class="nav-item"></a>
+            <a href="biography.aspx" id="item_3" class="nav-item"></a>
+            <a href="/" id="item_4" class="nav-item"></a>
+        </div>
+    </div>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <footer>
+        <div class="footer-content"></div>
+    </footer>
+
+     <script src="/_res/js/less.js"></script>
+    <script src="/_res/js/jquery.js"></script>
+</body>
+</html>
