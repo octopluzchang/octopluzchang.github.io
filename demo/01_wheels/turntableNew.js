@@ -1,5 +1,4 @@
 (function ($) {
-
     /**
      * @param {Object} options
      * @param {Array}  options.list  存储奖品的的列表，example [{1:{name:'谢谢参与',image:'1.jpg'}}]
@@ -10,24 +9,24 @@
      * @param {Object} options.title {color:'#5c1e08',font:'19px Arial'} 奖品标题颜色
      */
     $.fn.WheelSurf = function (options) {
-
         var _default = {
             outerCircle: {
-                color: '#d55c55'
+                color: '#0068e4'
             },
             innerCircle: {
                 color: '#f4ad26'
             },
             dots: ['#d3f9ff', '#d3f9ff'],
-            disk: ['#fefaeb', '#d55c55'],
+            disk: ['#aaffff', '#55e8f5', '#74c1de', '#0096ff', '#667feb', '#4167ff', '#ffd57c'],
             title: {
                 color: '#0004c8',
-                font: '12px Arial'
+                font: '19px Arial'
             }
         }
 
         $.extend(_default, options)
         // 画布中心移动到canvas中心
+        var dpi = window.devicePixelRatio;
         var _this = this[0],
             width = _this.width,
             height = _this.height,
@@ -38,8 +37,25 @@
             awardTitleEg2 = [],
             awardPic = [],
             awardIcon = []
+
+        function fix_dpi() {
+            //create a style object that returns width and height
+            let style = {
+                height() {
+                    return +getComputedStyle(_this).getPropertyValue('height').slice(0, -2);
+                },
+                width() {
+                    return +getComputedStyle(_this).getPropertyValue('width').slice(0, -2);
+                }
+            }
+            //set the correct attributes for a crystal clear image!
+//            console.log('WIDTH', style.width() * dpi)
+            _this.setAttribute('width', style.width() * dpi);
+            _this.setAttribute('height', style.height() * dpi);
+        }
+        
         for (var item in _default.list) {
-            console.log(_default.list);
+//            console.log(_default.list);
             if (_default.list[item].failOpt == 1) {
                 imgs.push(''); ///Content/Images/emoji.png
                 awardTitle.push('Ｘ');
@@ -106,7 +122,7 @@
                     ctx.beginPath();
                     ctx.lineWidth = 124;
                     ctx.strokeStyle = colors[i % colors.length]
-                    console.log(colors[i % colors.length]);
+//                    console.log(colors[i % colors.length]);
                     ctx.arc(0, 0, 72, startAngel, endAngel)
                     ctx.stroke();
                     startAngel = endAngel
@@ -122,29 +138,34 @@
                     }
                     for (var i = 0; i < num; i++) {
                         var img = new Image()
-
                         awardPic.push(img)
 
                         img.src = imgs[i]
-
-
+                        img.onload = function () {
+                            countImg++
+                            if (countImg == num) {
+                                dtd.resolve(awardPic);
+                            }
+                        }
                     }
                     return dtd.promise()
                 }
 
                 $.when(loadImg()).done(function (awardPic) {
+                        fix_dpi()
 
                 })
                 startAngel = angel / 2
                 for (var i = 0; i < num; i++) {
                     ctx.save();
                     ctx.rotate(startAngel)
+//                    console.log(awardPic[i].src.indexOf('emoji.png') > -1);
                     if (awardPic[i].src.indexOf('emoji.png') > -1) {
                         ctx.drawImage(awardPic[i], -32, -32 - 100);
-
                     } else {
-                        var icon = document.getElementById(awardIcon[i]);
-                        ctx.drawImage(awardPic[i], -16, -85, 40, 40);
+                        
+                        var icon = new Image()
+                        icon.src = awardIcon[i]
                         ctx.drawImage(icon, -16, -85, 40, 40);
                         ctx.font = _default.title.font;
                         ctx.fillStyle = _default.title.color
@@ -152,6 +173,7 @@
                         ctx.fillText(awardTitle[i], 0, -115);
                         ctx.fillText(awardTitleEg[i], 0, -100);
                         ctx.fillText(awardTitleEg2[i], 0, -90);
+
                     }
                     startAngel += angel
                     ctx.restore();
