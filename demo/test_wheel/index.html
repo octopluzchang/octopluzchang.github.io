@@ -165,29 +165,68 @@
             if (lang == 'en') {
                 $("#playWheel").attr("src", "https://www.qr-sc.com/Content/Images/start_en.png");
             }
-            var initData = [
-    {
-        "id": 1,
-        "name": "A",
-        "listName": "买 3 送 1 兑换券",
-        "rank": 1,
-        "percent": 100
-    },
-    {
-        "id": 2,
-        "name": "B",
-        "listName": "买 5 送 1 兑换券",
-        "rank": 2,
-        "percent": 0
-    },
-    {
-        "id": 3,
-        "name": "铭谢惠顾",
-        "listName": "",
-        "rank": 3,
-        "percent": 0
-    }
-];
+            var initData = [{
+                "id": 1,
+                "name": "面膜x1盒",
+                "nameEg": "A box of",
+                "nameEg2": "sheet masks",
+                "icon": "prize_1",
+                "listName": "买 3 送 1 兑换券",
+                "rank": 1,
+                "percent": 100
+            },
+            {
+                "id": 2,
+                "name": "再來一次",
+                "nameEg": "Spin Again",
+                "nameEg2": "",
+                "icon": "prize_2",
+                "listName": "买 5 送 1 兑换券",
+                "rank": 2,
+                "percent": 0
+            },
+            {
+                "id": 3,
+                "name": "膠原飲x1盒",
+                "nameEg": "A box of",
+                "nameEg2": "Collagen drink",
+                "icon": "prize_3",
+                "listName": "买 5 送 1 兑换券",
+                "rank": 3,
+                "percent": 0
+            },
+            {
+                "id": 4,
+                "name": "免疫粉包x1盒",
+                "nameEg": "A box of immunity-",
+                "nameEg2": "boosting powder",
+                "icon": "prize_4",
+                "listName": "买 5 送 1 兑换券",
+                "rank": 4,
+                "percent": 0
+            },
+            {
+                "id": 5,
+                "name": "忠誠點數100",
+                "nameEg": "100 Points",
+                "nameEg2": "",
+                "icon": "prize_5",
+                "listName": "买 5 送 1 兑换券",
+                "rank": 5,
+                "percent": 0
+            },
+
+            {
+                "id": 6,
+                "name": "铭谢惠顾",
+                "nameEg": "Thank You",
+                "nameEg2": "",
+                "icon": "prize_6",
+                "listName": "",
+                "rank": 6,
+                "percent": 0
+            }
+        ];
             
 			for (var i = 0; i < initData.length; i++) {
                         if (initData[i].name != '铭谢惠顾') {
@@ -229,8 +268,9 @@
             var _disk = [];
             if (initData.length % 2 == 0) {
                 for (var i = 0; i < initData.length / 2; i++) {
-                    _disk.push('#aaffff');
-                    _disk.push('#DDFFF9');
+                    _disk.push('#d1443d');
+                _disk.push('#de746f');
+                _disk.push('#b53731');
                 }
             }
             else {
@@ -245,18 +285,18 @@
             }
             var wheelSurf = $('#myCanvas').WheelSurf({
                 list: list,
-                outerCircle: {
-                    color: '#0068e4'
-                },
-                innerCircle: {
-                    color: '#f4ad26'
-                },
-                dots: ['#ffffff', '#ffffff'],
-                disk: _disk,
-                title: {
-                    color: '#0004c8',
-                    font: '19px Arial'
-                }
+            outerCircle: {
+                color: '#ffa20e'
+            },
+            innerCircle: {
+                color: '#f4ad26'
+            },
+            dots: ['#ffffff', '#ffffff'],
+            disk: _disk,
+            title: {
+                color: '#fff',
+                font: '11px Arial',
+            }
             });
 
 

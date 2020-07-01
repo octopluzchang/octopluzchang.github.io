@@ -66,7 +66,7 @@
                 ctx.rotate(angelTo * Math.PI / 180);
                 // 画外圆
                 ctx.beginPath();
-                ctx.lineWidth = 15;
+                ctx.lineWidth = 50;
                 ctx.strokeStyle = _default.outerCircle.color;
                 ctx.arc(0, 0, 133, 0, 2 * Math.PI)
                 ctx.stroke();
@@ -79,18 +79,18 @@
 
                 // 装饰点
                 var dotColor = _default.dots
-                for (var i = 0; i < 12; i++) {
+                for (var i = 0; i < 20; i++) {
                     // 装饰点 圆心 坐标计算
                     ctx.beginPath();
-                    var radius = 133
+                    var radius = 145
                     var xr = radius * Math.cos(startAngel)
                     var yr = radius * Math.sin(startAngel)
 
                     ctx.fillStyle = dotColor[i % dotColor.length]
-                    ctx.arc(xr, yr, 8, 0, 2 * Math.PI)
+                    ctx.arc(xr, yr, 5, 0, 2 * Math.PI)
                     ctx.fill()
 
-                    startAngel += (2 * Math.PI / 360) * (360 / 12);
+                    startAngel += (2 * Math.PI / 360) * (360 / 20);
 
                 }
                 // 画里转盘                
