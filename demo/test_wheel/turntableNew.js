@@ -32,6 +32,9 @@
             ctx = _this.getContext("2d"),
             imgs = [],
             awardTitle = [],
+            awardTitleEg = [],
+            awardTitleEg2 = [],
+            awardIcon = [],
             awardPic = []
         for (var item in _default.list) {
 			console.log(_default.list);
@@ -42,6 +45,9 @@
             else {
                 imgs.push('');
                 awardTitle.push(_default.list[item].name);
+                awardTitleEg.push(_default.list[item].nameEg);
+                awardTitleEg2.push(_default.list[item].nameEg2);
+                awardIcon.push(_default.list[item].icon);
             }
         }
         var num = imgs.length
@@ -144,6 +150,14 @@
                             ctx.fillStyle = _default.title.color
                             ctx.textAlign = "center";
                             ctx.fillText(awardTitle[i], 0, -90);
+                            var icon = document.getElementById(awardIcon[i]);
+                        ctx.drawImage(awardPic[i], -16, -85, 40, 40);
+                        ctx.drawImage(icon, -16, -85, 40, 40);
+                        ctx.font = _default.title.font;
+                        ctx.fillStyle = _default.title.color
+                        ctx.textAlign = "center";
+                        ctx.fillText(awardTitle[i], 0, -115);
+                        ctx.fillText(awardTitleEg[i], 0, -100);
                         }
                         startAngel += angel
                         ctx.restore();

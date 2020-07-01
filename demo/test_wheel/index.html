@@ -259,10 +259,13 @@
             var angel = 360 / initData.length;
             for (var i = 0, l = initData.length; i < l; i++) {
                 list[initData[i].rank] = {
-                    id: initData[i].id,
-                    name: initData[i].name,
-                    failOpt: initData[i].failOpt ? initData[i].failOpt : 0
-                }
+                id: initData[i].id,
+                name: initData[i].name,
+                nameEg: initData[i].nameEg,
+                nameEg2: initData[i].nameEg2,
+                icon: initData[i].icon,
+                failOpt: initData[i].failOpt ? initData[i].failOpt : 0
+            }
             }
             //$("#myCanvas").css("width", $("body").css("width"));
             var _disk = [];
