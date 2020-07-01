@@ -152,7 +152,7 @@
                 }
 
                 $.when(loadImg()).done(function (awardPic) {
-                        fix_dpi()
+//                        fix_dpi()
 
                 })
                 startAngel = angel / 2
