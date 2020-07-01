@@ -86,25 +86,70 @@
             margin-top: -82px;
             cursor: pointer;*/
             position: absolute;
-            top: 42%;
-            left: 49.99%;
-            margin-left: -76px;
-            margin-top: -82px;
+            top: 48%;
+            left: 50%;
+            transform: translateY(-48%) translateX(-50%);
             cursor: pointer;
-            width: 152px;
+            width: 50px;
+        }
+        .buttonContainer {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 30px;
+            font-size: 20px;
+            padding: 10px;
+            max-width: 300px;
+            color: white;
+            background: linear-gradient(0deg, rgba(46, 98, 59, 1) 0%, rgba(46, 98, 59, 1) 46%, rgba(142, 187, 135, 1) 100%);
+            border: 2px solid #2e623b;
+            font-weight: bold;
+            outline: none;
+        }
+
+        button.main {
+            background: linear-gradient(0deg, rgba(149, 84, 206, 1) 0%, rgba(149, 84, 206, 1) 46%, rgba(206, 177, 229, 1) 100%);
+            border-color: #9554ce;
+        }
+        #gallery {
+            display: none;
+        }
+    #title {
+            width: 100%;
+            max-width: 800px;
         }
 </style>
 
-
+    <img src="title.png" id="title">
     <div class="lottery">
                             <canvas id="myCanvas" width="320" height="320">
                                 当前浏览器版本过低，请使用其他浏览器尝试
                             </canvas>
-                            <img src="https://www.qr-sc.com/Content/Images/start.png" id="playWheel">
+                            <img src="./start.png">
                         </div>
+<!--
                         <div class="awards">
                             <table id="awardsTable"><tr><td style="min-width:100px;word-break: break-word;">A奖项</td><td style="word-break: break-word;">买 3 送 1 兑换券</td></tr><tr><td style="min-width:100px;word-break: break-word;">B奖项</td><td style="word-break: break-word;">买 5 送 1 兑换券</td></tr></table>
                         </div>
+-->
+<div class="buttonContainer">
+        <button id="playWheel" class="main">CLICK TO DRAW</button>
+        <button>CLAIM THE PRIZE</button>
+    </div>
+    <div id="gallery">
+        <img src="prize_1.png" id="prize_1">
+        <img src="prize_2.png" id="prize_2">
+        <img src="prize_3.png" id="prize_3">
+        <img src="prize_4.png" id="prize_4">
+        <img src="prize_5.png" id="prize_5">
+        <img src="prize_6.png" id="prize_6">
+    </div>
 
 
     <!-- Optional JavaScript -->
