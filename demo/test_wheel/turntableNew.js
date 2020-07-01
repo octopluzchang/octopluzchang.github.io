@@ -147,6 +147,7 @@
                     } else {
 //                        var icon = document.getElementById(awardIcon[i]);
                         var icon = new Image()
+                        console.log('iconiocn', icon)
                         icon.src = awardIcon[i]
                         ctx.drawImage(icon, -16, -85, 40, 40);
                         ctx.font = _default.title.font;
