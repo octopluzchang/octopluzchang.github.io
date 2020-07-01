@@ -32,7 +32,10 @@
             ctx = _this.getContext("2d"),
             imgs = [],
             awardTitle = [],
-            awardPic = []
+            awardTitleEg = [],
+            awardTitleEg2 = [],
+            awardPic = [],
+            awardIcon = []
         for (var item in _default.list) {
 			console.log(_default.list);
             if (_default.list[item].failOpt == 1) {
@@ -42,6 +45,9 @@
             else {
                 imgs.push('');
                 awardTitle.push(_default.list[item].name);
+                awardTitleEg.push(_default.list[item].nameEg);
+                awardTitleEg2.push(_default.list[item].nameEg2);
+                awardIcon.push(_default.list[item].icon);
             }
         }
         var num = imgs.length
