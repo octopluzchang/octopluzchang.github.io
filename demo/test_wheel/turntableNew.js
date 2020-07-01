@@ -24,7 +24,7 @@
             }
         }
 
-        $.extend(_default,options)
+        $.extend(_default, options)
         // 画布中心移动到canvas中心
         var _this = this[0],
             width = _this.width,
@@ -37,12 +37,11 @@
             awardPic = [],
             awardIcon = []
         for (var item in _default.list) {
-			console.log(_default.list);
+            console.log(_default.list);
             if (_default.list[item].failOpt == 1) {
-                imgs.push('');///Content/Images/emoji.png
+                imgs.push(''); ///Content/Images/emoji.png
                 awardTitle.push('Ｘ');
-            }
-            else {
+            } else {
                 imgs.push('');
                 awardTitle.push(_default.list[item].name);
                 awardTitleEg.push(_default.list[item].nameEg);
@@ -105,55 +104,57 @@
                     ctx.beginPath();
                     ctx.lineWidth = 124;
                     ctx.strokeStyle = colors[i % colors.length]
-					console.log(colors[i % colors.length]);
+                    console.log(colors[i % colors.length]);
                     ctx.arc(0, 0, 72, startAngel, endAngel)
                     ctx.stroke();
                     startAngel = endAngel
                     endAngel += angel
                 }
                 // 添加奖品
-                 function loadImg() {
+                function loadImg() {
 
-                     var dtd = $.Deferred()
-                     var countImg = 0
-                     if (awardPic.length) {
-                         return dtd.resolve(awardPic);
-                     }
-                     for (var i = 0; i < num; i++) {
-                         var img = new Image()
-                         awardPic.push(img)
-
-                         img.src = imgs[i]
-                         img.onload = function () {
-                             countImg++
-                             if (countImg == num) {
-                                 dtd.resolve(awardPic);
-                             }
-                         }
-                     }
-                     return dtd.promise()
-                 }
-
-                 $.when(loadImg()).done(function (awardPic) {
-
-                    
-                 })
-				startAngel = angel / 2
-                    for (var i = 0; i < num; i++) {
-                        ctx.save();
-                        ctx.rotate(startAngel)
-                        console.log(awardPic[i].src.indexOf('emoji.png') > -1);
-                        if (awardPic[i].src.indexOf('emoji.png') > -1) {
-                            ctx.drawImage(awardPic[i], -32, -32 - 100);
-                        } else {
-                            ctx.font = _default.title.font;
-                            ctx.fillStyle = _default.title.color
-                            ctx.textAlign = "center";
-                            ctx.fillText(awardTitle[i], 0, -90);
-                        }
-                        startAngel += angel
-                        ctx.restore();
+                    var dtd = $.Deferred()
+                    var countImg = 0
+                    if (awardPic.length) {
+                        return dtd.resolve(awardPic);
                     }
+                    for (var i = 0; i < num; i++) {
+                        var img = new Image()
+                        awardPic.push(img)
+
+                        img.src = imgs[i]
+                        img.onload = function () {
+                            countImg++
+                            if (countImg == num) {
+                                dtd.resolve(awardPic);
+                            }
+                        }
+                    }
+                    return dtd.promise()
+                }
+
+                $.when(loadImg()).done(function (awardPic) {
+
+
+                })
+                startAngel = angel / 2
+                for (var i = 0; i < num; i++) {
+                    ctx.save();
+                    ctx.rotate(startAngel)
+                    console.log(awardPic[i].src.indexOf('emoji.png') > -1);
+                    if (awardPic[i].src.indexOf('emoji.png') > -1) {
+                        ctx.drawImage(awardPic[i], -32, -32 - 100);
+                    } else {
+                        ctx.font = _default.title.font;
+                        ctx.fillStyle = _default.title.color
+                        ctx.textAlign = "center";
+                        ctx.fillText(awardTitle[i], 0, -115);
+                        ctx.fillText(awardTitleEg[i], 0, -100);
+                        ctx.fillText(awardTitleEg2[i], 0, -90);
+                    }
+                    startAngel += angel
+                    ctx.restore();
+                }
                 ctx.restore();
             },
             /**
@@ -162,7 +163,7 @@
              */
             lottery: function (angel, callback) {
                 angel = angel || 0
-                angel = 360-angel
+                angel = 360 - angel
                 angel += 360 * 6
                 // 基值（减速）
                 var baseStep = 120
