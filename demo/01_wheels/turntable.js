@@ -36,11 +36,20 @@
             awardTitleEg2 = [],
             awardPic = []
         for (var item in _default.list) {
+            if (_default.list[item].image.length === 0) {
+                imgs.push('./images/empty.png');
+                awardTitle.push(_default.list[item].name)
+            awardTitleEg.push(_default.list[item].nameEg)
+            awardTitleEg2.push(_default.list[item].nameEg2)
+            }
+            else {
             awardTitle.push(_default.list[item].name)
             awardTitleEg.push(_default.list[item].nameEg)
             awardTitleEg2.push(_default.list[item].nameEg2)
             imgs.push(_default.list[item].image)
+            }
         }
+        console.log(imgs)
         var num = imgs.length
         // 圆心
         var x = width / 2
@@ -125,7 +134,6 @@
                 }
 
                 $.when(loadImg()).done(function (awardPic) {
-
                     startAngel = angel / 2
                     for (var i = 0; i < num; i++) {
                         ctx.save();
