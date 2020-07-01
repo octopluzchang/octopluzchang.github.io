@@ -145,6 +145,8 @@
                     if (awardPic[i].src.indexOf('emoji.png') > -1) {
                         ctx.drawImage(awardPic[i], -32, -32 - 100);
                     } else {
+                        var icon = document.getElementById(awardIcon[i]);
+                        ctx.drawImage(icon, -16, -85, 40, 40);
                         ctx.font = _default.title.font;
                         ctx.fillStyle = _default.title.color
                         ctx.textAlign = "center";
