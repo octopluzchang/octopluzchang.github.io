@@ -146,10 +146,6 @@
                         if (awardPic[i].src.indexOf('emoji.png') > -1) {
                             ctx.drawImage(awardPic[i], -32, -32 - 100);
                         } else {
-                            ctx.font = _default.title.font;
-                            ctx.fillStyle = _default.title.color
-                            ctx.textAlign = "center";
-                            ctx.fillText(awardTitle[i], 0, -90);
                             var icon = document.getElementById(awardIcon[i]);
                         ctx.drawImage(awardPic[i], -16, -85, 40, 40);
                         ctx.drawImage(icon, -16, -85, 40, 40);
@@ -158,6 +154,7 @@
                         ctx.textAlign = "center";
                         ctx.fillText(awardTitle[i], 0, -115);
                         ctx.fillText(awardTitleEg[i], 0, -100);
+                        ctx.fillText(awardTitleEg2[i], 0, -90);
                         }
                         startAngel += angel
                         ctx.restore();
