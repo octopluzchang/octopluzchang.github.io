@@ -138,13 +138,10 @@
                     for (var i = 0; i < num; i++) {
                         ctx.save();
                         ctx.rotate(startAngel)
-                        ctx.drawImage(awardPic[i], -16, -85, 40, 40);
                         ctx.font = _default.title.font;
                         ctx.fillStyle = _default.title.color
                         ctx.textAlign = "center";
-                        ctx.fillText(awardTitle[i], 0, -115);
-                        ctx.fillText(awardTitleEg[i], 0, -100);
-                        ctx.fillText(awardTitleEg2[i], 0, -90);
+                        ctx.fillText(awardTitle[i], 0, -90);
                         startAngel += angel
                         ctx.restore();
                     }
