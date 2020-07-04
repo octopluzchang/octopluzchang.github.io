@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 :root {
     --dark-brown: #473c28;
     --tci-gold: #bb934d;
@@ -11,13 +12,14 @@
     --tci-red: #9f1d3f;
     --shadow: 0 25px 20px -21px rgba(71, 60, 40, .57);
 }
+
 body {
     background: url(images/bg.png);
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
-    background-size:   200% auto;
+    background-size: auto 100% ;
     min-height: 100vh;
-    background-color: #ffffff;
+    background-color: #f5f5fc;
     padding: 20px 0;
 }
 
@@ -78,7 +80,7 @@ a:active {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .label {
@@ -98,6 +100,7 @@ a:active {
     font-size: 13px;
     font-weight: bold;
 }
+
 .footer {
     position: fixed;
     width: 100%;
@@ -113,6 +116,12 @@ a:active {
     margin-bottom: 20px;
 }
 
+/*
+input {
+    -webkit-appearance: none;
+      -moz-appearance: none;
+}
+
 input[type="radio"] {
     display: inline-block;
     vertical-align: middle;
@@ -124,18 +133,19 @@ input[type="radio"] {
     width: 20px !important;
     height: 20px;
     cursor: pointer;
+}
 
-    &:hover {
-      border: 2px solid grey;
-    }
+input[type="radio"]:hover {
+    border: 2px solid grey;
+}
 
-    &:checked {
-      background-color: grey;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 20px;
-    }
-  }
+input[type="radio"]:checked {
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+}
+*/
 
 .pageNavContainer {
     display: flex;
@@ -154,4 +164,3 @@ input[type="radio"] {
 .pageNav.active {
     background-color: var(--tci-gold);
 }
-
