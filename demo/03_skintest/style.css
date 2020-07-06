@@ -41,6 +41,14 @@ a {
     font-weight: bold;
 }
 
+.mr-0 {
+    margin-bottom: 0;
+}
+
+.mr-1 {
+    margin-bottom: 1em;
+}
+
 a:active {
     color: var(--tci-gold);
     text-decoration: none;
@@ -107,8 +115,6 @@ a:active {
     bottom: 0px;
     left: 0;
     padding: 20px 10px;
-    box-shadow: 5px 0 5px rgba(149, 149, 149, 0.3);
-    background-color: rgba(255, 255, 255, 0.8);
 }
 
 
