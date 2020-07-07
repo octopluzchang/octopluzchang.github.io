@@ -96,6 +96,10 @@ a:active {
 
 }
 
+.logo {
+    width: 150px;
+}
+
 .label {
     margin: 0;
 }
