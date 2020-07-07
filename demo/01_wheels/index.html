@@ -121,23 +121,23 @@
                     "prize": "恭喜您，现场获得TCI血橙胶原蛋白饮一盒！",
                     "image": "./images/1.png",
                     "rank": 1,
-                    "percent": 3
+                    "percent": 40
                 },
                 {
                     "id": 101,
                     "name": "B奖项",
-                    "prize": "恭喜您，现场获得TCI血橙胶原蛋白饮一盒！",
+                    "prize": "恭喜您，现场获得TCI花凝系列面膜一片",
                     "image": "",
                     "rank": 2,
-                    "percent": 5
+                    "percent": 30
                 },
                 {
                     "id": 102,
                     "name": "C奖项",
-                    "prize": "恭喜您，现场获得TCI血橙胶原蛋白饮一盒！",
+                    "prize": "恭喜您，现场获得TCI内服外养套组一盒！",
                     "image": "./images/3.png",
                     "rank": 3,
-                    "percent": 2
+                    "percent": 20
                 },
                 {
                     "id": 103,
@@ -145,7 +145,7 @@
                     "prize": "未中奖，感谢您的参与！",
                     "image": "./images/4.png",
                     "rank": 4,
-                    "percent": 49
+                    "percent": 10
                 }
             ]
         }
@@ -257,8 +257,9 @@
             // 转盘抽奖，
             wheelSurf.lottery((count * angel + angel / 2), function() {
                 alert(winData.prize)
-                //$("#message").html(winData.name)
-                if (window.location.href.split('/')[1].length === '') {} else {
+                if (tCode == undefined) {
+                    console.log('just playing')
+                } else {
                     base('record').create([{
                         "fields": {
                             "tCode": tCode,
