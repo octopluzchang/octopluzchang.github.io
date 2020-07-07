@@ -13,7 +13,7 @@
 }
 body {
     background: url(images/bg.png);
-    background-position: top;
+    background-position: -10px -20px;
     background-repeat: no-repeat;
     background-size:   120% auto;
     min-height: 100vh;
@@ -26,6 +26,7 @@ body {
     width: 100%;
     margin: 0 auto;
     max-width: 400px;
+    margin-top: -30px;
 }
 
 .section {
@@ -45,6 +46,18 @@ a:active, a:hover {
     text-decoration: none;
 }
 
+.lottery::after {
+    content: ' ';
+    width: 325px;
+    height: 325px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-40%);
+    z-index: -1;
+}
 
 .button {
     display: inline-flex;
@@ -94,7 +107,10 @@ a:active, a:hover {
     box-shadow: 0 5px 5px rgba(149, 149, 149, 0.3);
 }
 
-
+.mainTitle {
+    font-size: 80px;
+    text-shadow: var(--shadow);
+}
 .header {
     margin-bottom: 30px;
     font-size: 13px;
@@ -110,6 +126,9 @@ a:active, a:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+.logo {
+    width: 150px;
+}
 
 .quizTitle {
     margin-bottom: 20px;

@@ -10,10 +10,12 @@
     <title>抽奖</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="airtable.js"></script>
     <style>
         #myCanvas {
             border: none !important;
         }
+
         .lottery {
             position: relative;
             display: inline-block;
@@ -35,6 +37,7 @@
             top: 0px;
             left: 10%;
         }
+
         .container {
             position: relative;
             display: inline-block;
@@ -42,9 +45,11 @@
             text-align: center;
             margin-top: 20px;
         }
+
         #gallery {
             display: none;
         }
+
     </style>
     <!--[if lte IE 8]>
         <style>
@@ -56,59 +61,63 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="text-left">
-            <h1 class="display-2">LUCKY<br>WHEEL</h1>
-            <h3>TCI 幸运转盘</h3>
-        </div>
-    </div>
-    <div class="lottery">
-        <canvas id="myCanvas" width="350" height="350" style="border:1px solid #d3d3d3;">
-            当前浏览器版本过低，请使用其他浏览器尝试
-        </canvas>
-        <p id="message"></p>
-        <img src="./images/start.png">
-    </div>
-    <div class="container">
-        <a href="javascript:;" id="start" class="button">试试手气</a>
-        <div class="row">
-            <div class="col-auto text-left">
-                A奖项
-            </div>
-            <div class="col text-right">
-                TCI免费华丽直播一次
+    <div class="wrapper">
+        <div class="container">
+            <div class="text-left">
+                <img src="images/logo.png" class="logo">
+                <h1 class="mainTitle">LUCKY<br>WHEEL</h1>
+                <h3>TCI 幸运转盘</h3>
             </div>
         </div>
-        <div class="row">
-            <div class="col-auto text-left">
-                B奖项
-            </div>
-            <div class="col text-right">
-                TCI忠诚点数100点
-            </div>
+        <div class="lottery">
+            <canvas id="myCanvas" width="350" height="350" style="border:1px solid #d3d3d3;">
+                当前浏览器版本过低，请使用其他浏览器尝试
+            </canvas>
+            <p id="message"></p>
+            <img src="./images/start.png">
         </div>
-        <div class="row">
-            <div class="col-auto text-left">
-                C奖项
+        
+        <div class="container">
+           <a href="javascript:;" id="start" class="button">试试手气</a>
+            <div class="row">
+                <div class="col-auto text-left">
+                    A奖项
+                </div>
+                <div class="col text-right">
+                    TCI免费华丽直播一次
+                </div>
             </div>
-            <div class="col text-right">
-                TCI忠诚点数50点
+            <div class="row">
+                <div class="col-auto text-left">
+                    B奖项
+                </div>
+                <div class="col text-right">
+                    TCI忠诚点数100点
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-auto text-left">
-                D奖项
+            <div class="row">
+                <div class="col-auto text-left">
+                    C奖项
+                </div>
+                <div class="col text-right">
+                    TCI忠诚点数50点
+                </div>
             </div>
-            <div class="col text-right">
-                TCI忠诚点数20点
+            <div class="row">
+                <div class="col-auto text-left">
+                    D奖项
+                </div>
+                <div class="col text-right">
+                    TCI忠诚点数20点
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-auto text-left">
-                E奖项
-            </div>
-            <div class="col text-right">
-                TCI忠诚点数5点
+            <div class="row">
+                <div class="col-auto text-left">
+                    E奖项
+                </div>
+                <div class="col text-right">
+                    TCI忠诚点数5点
+                </div>
             </div>
         </div>
     </div>
@@ -122,59 +131,59 @@
                     "id": 100,
                     "name": "A奖项",
                     "image": "./images/1.png",
-                    "rank":1,
-                    "percent":3
+                    "rank": 1,
+                    "percent": 3
                 },
                 {
                     "id": 101,
                     "name": "B奖项",
                     "image": "",
-                    "rank":2,
-                    "percent":5
+                    "rank": 2,
+                    "percent": 5
                 },
                 {
                     "id": 102,
                     "name": "C奖项",
                     "image": "./images/3.png",
-                    "rank":3,
-                    "percent":2
+                    "rank": 3,
+                    "percent": 2
                 },
                 {
                     "id": 103,
                     "name": "D奖项",
                     "image": "./images/4.png",
-                    "rank":4,
-                    "percent":49
+                    "rank": 4,
+                    "percent": 49
                 },
                 {
                     "id": 104,
                     "name": "E奖项",
                     "image": "./images/5.png",
-                    "rank":5,
-                    "percent":30
+                    "rank": 5,
+                    "percent": 30
                 }
             ]
         }
 
         // 计算分配获奖概率(前提所有奖品概率相加100%)
-        function getGift(){
-            var percent = Math.random()*100
+        function getGift() {
+            var percent = Math.random() * 100
             var totalPercent = 0
-            for(var i = 0 ,l = initData.list.length;i<l;i++){
+            for (var i = 0, l = initData.list.length; i < l; i++) {
                 totalPercent += initData.list[i].percent
-                if(percent<=totalPercent){
+                if (percent <= totalPercent) {
                     return initData.list[i]
                 }
-            }           
+            }
         }
 
         var list = {}
-        
+
         var angel = 360 / initData.list.length
         // 格式化成插件需要的奖品列表格式
         for (var i = 0, l = initData.list.length; i < l; i++) {
             list[initData.list[i].rank] = {
-                id:initData.list[i].id,
+                id: initData.list[i].id,
                 name: initData.list[i].name,
                 nameEg: initData.list[i].nameEg,
                 nameEg2: initData.list[i].nameEg2,
@@ -182,7 +191,7 @@
             }
         }
         // 查看奖品列表格式
-        
+
         // 定义转盘奖品
         wheelSurf = $('#myCanvas').WheelSurf({
             list: list, // 奖品 列表，(必填)
@@ -202,14 +211,49 @@
 
         // 初始化转盘
         wheelSurf.init()
+        //AirTable
+        let tCode = window.location.href.split('?tCode=')[1],
+            Airtable = require('airtable'),
+            base = new Airtable({
+                apiKey: 'keyAZHw39lMlDtr2O'
+            }).base('appO3oeow3wdBxPJc');
+        retrieveMsg();
+
+        function retrieveMsg() {
+            base('record').select({
+                maxRecords: 1,
+                view: "Grid view",
+                fields: ["tCode", "result"],
+                filterByFormula: "{tCode} = '" + tCode + "'"
+            }).eachPage(function page(records, fetchNextPage) {
+
+                if (records.length === 0) {
+                    //                    $('#q0').show()
+                } else {
+                    records.forEach(function(record) {
+                        let reult = record.get('result');
+                        alert(reult)
+                        console.log('tCode = ', record.get('tCode'));
+                    });
+                }
+
+                fetchNextPage();
+
+            }, function done(err) {
+                if (err) {
+                    console.error(err);
+                    return;
+                }
+            });
+        }
         // 抽奖
         var throttle = true;
-        $("#start").on('click', function () {
+        $("#start").on('click', function() {
 
             var winData = getGift() // 正常情况下获奖信息应该由后台返回
 
             $("#message").html('')
-            if(!throttle){
+            if (!throttle) {
                 return false;
             }
             throttle = false;
@@ -217,23 +261,32 @@
             // 计算奖品角度
 
             for (const key in list) {
-                if (list.hasOwnProperty(key)) {                    
+                if (list.hasOwnProperty(key)) {
                     if (winData.id == list[key].id) {
                         break;
                     }
-                    count++    
+                    count++
                 }
             }
-      
+
             // 转盘抽奖，
-            wheelSurf.lottery((count * angel + angel / 2), function () {
+            wheelSurf.lottery((count * angel + angel / 2), function() {
                 alert('恭喜獲得：「' + winData.name + '」')
                 //$("#message").html(winData.name)
+                    base('record').create([{
+                        "fields": {
+                            "tCode": tCode,
+                            "result": winData.name
+                        }
+                    }], function(err) {
+                        if (err) {
+                            console.error(err);
+                        } else {}
+                    });
                 throttle = true;
             })
         })
 
-        
     </script>
 </body>
 

@@ -49,7 +49,6 @@
             imgs.push(_default.list[item].image)
             }
         }
-        console.log(imgs)
         var num = imgs.length
         // 圆心
         var x = width / 2
