@@ -437,7 +437,7 @@
                         <div class="col highlighted">
                             <div>您的肤质类型</div>
                             <h1>
-                                轻干/干性/中性-紧致性
+                                干性-紧致性
                             </h1>
                         </div>
 
@@ -461,13 +461,14 @@
                 </div>
                 <div class="section">
                     <h3 class="highlighted">
-                        推薦商品
+                        推荐商品
                     </h3>
                 </div>
                 <div class="block">
                     <div class="row mr-1">
                         <div class="col">
                             <h5>TCI款冬花保湿透白面膜</h5>
+                            <img src="images/product_5.jpg" class="img-fluid">
                             <div>
                                 严寒中逆势绽放的款冬花，汲取层层霜雪中的保湿能量，
                                 从基因开始帮您自生玻尿酸! 搭配白酵素，同步开启肌肤活力
@@ -496,7 +497,7 @@
                         <div class="col highlighted">
                             <div>您的肤质类型</div>
                             <h1>
-                                轻干/干性/中性-皱纹性
+                                干性-皱纹性
                             </h1>
                         </div>
 
@@ -520,13 +521,14 @@
                 </div>
                 <div class="section">
                     <h3 class="highlighted">
-                        推薦商品
+                        推荐商品
                     </h3>
                 </div>
                 <div class="block">
                     <div class="row mr-1">
                         <div class="col">
                             <h5>TCI火龙果花弹力紧致面膜</h5>
+                            <img src="images/product_1.jpg" class="img-fluid">
                             <div>
                                 远古神仙果，含有高度能量，能帮助肌肤孕育美丽新能量
                                 精选胚珠时期，完整萃取成果前所蕴含最精华的养分，
@@ -580,13 +582,14 @@
                 </div>
                 <div class="section">
                     <h3 class="highlighted">
-                        推薦商品
+                        推荐商品
                     </h3>
                 </div>
                 <div class="block">
                     <div class="row mr-1">
                         <div class="col">
                             <h5>TCI金针花祛痘镇静面膜</h5>
+                            <img src="images/product_4.jpg" class="img-fluid">
                             <div>
                                 花朵每一次的绽放，都是汇聚植物大量养分的时期，而金针花从开花到凋谢只有一天的花期，特别之珍贵。特别截取绽放时期的金针花，搭配专利TCI633，有效平衡肌肤，控油舒缓，重拾无瑕平滑肌！主成份：金针花萃取、 TCI633 、 甘草萃取、珍珠萃取、玻尿酸
                             </div>
@@ -636,13 +639,14 @@
                 </div>
                 <div class="section">
                     <h3 class="highlighted">
-                        推薦商品
+                        推荐商品
                     </h3>
                 </div>
                 <div class="block">
                     <div class="row mr-1">
                         <div class="col">
                             <h5>TCI玫瑰石榴抚纹塑颜面膜</h5>
+                            <img src="images/product_3.jpg" class="img-fluid">
                             <div>
                                 集结伊朗新生玫瑰&宝石红石榴的双重红色能量
                                 藉由新生玫瑰满满能量，促生肌底胶原，掌握肌肤新生力
@@ -742,8 +746,6 @@
         $('.quizContainer').hide()
         param1 = q1result + q2result + q3result
         param2 = q4result + q5result + q6result
-        console.log(param1)
-        console.log(param2)
         if (param1 >= 0 && param2 > 0) {
             $('#result1').show()
             quizresult = '1'
@@ -760,10 +762,8 @@
             $('#result4').show()
             quizresult = '4'
         }
-        if (quizresult == 0) {
-            alert('error')
+        if (quizresult == 0 || window.location.href.split('/')[1].length === '') {
         } else {
-            console.log('result', quizresult)
             base('record').create([{
                 "fields": {
                     "tCode": tCode,
