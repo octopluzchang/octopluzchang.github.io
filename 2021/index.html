@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="./index.js"></script>
+    <style>
+        .section {
+            height: 100vh;
+        }
+        .bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+        #anim01 {
+            /* opacity: 0; */
+        }
+        #anim01, #anim02 {
+            position: absolute;
+            right: 0px;
+            height: auto;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container" id="MyContainerId">
+        <div id="landing" class="row align-items-center section">
+            <div class="col">
+                <h1>Explore new possibilities<br> for creativity.</h1>
+            </div>
+            
+        </div>
+        <div id="intro" class="row align-items-center section">
+            <div class="col-6"></div>
+            <div class="col-6">
+                <h3>Hi, I’m Kenny</h3>
+                <p>I’m an entrepreneur and multidisciplinary designer from Taiwan. I focus on digital product design & front-end develope</p>
+            </div>
+        </div>
+        <div id="process" class="row align-items-center section">
+            <div class="col-6"></div>
+            <div class="col-6">
+                <h3>Design Process</h3>
+                <h6>How to design things you will love</h6>
+                <h4>Explore</h4>
+                <p>During our initial consultation, we’ll establish your current and future objectives and lock down scope of work, timeline, and budget. We may walk you through an example of what our typical project proposal looks like and if needed we may schedule a follow-up call to further scope your project. Finally, we will discuss next steps.</p>
+                <h4>Experiments</h4>
+                <p>During our initial consultation, we’ll establish your current and future objectives and lock down scope of work, timeline, and budget. We may walk you through an example of what our typical project proposal looks like and if needed we may schedule a follow-up call to further scope your project. Finally, we will discuss next steps.</p>
+                <h4>Design</h4>
+                <p>During our initial consultation, we’ll establish your current and future objectives and lock down scope of work, timeline, and budget. We may walk you through an example of what our typical project proposal looks like and if needed we may schedule a follow-up call to further scope your project. Finally, we will discuss next steps.</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg">
+        <div class="container">
+            <div class="row section">
+                <div class="col"></div>
+                <div class="col align-items-center">
+                    <!-- <lottie-player 
+                     id="anim02"
+                     loop
+                     autoplay
+                    ></lottie-player>
+                    <lottie-player 
+                     id="anim01"
+                    ></lottie-player> -->
+                    <lottie-player
+                        id="anim01"
+                        src="https://assets2.lottiefiles.com/private_files/lf30_nnoebnoq.json"
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    // const player1 = document.querySelector("#anim01");
+    // const player2 = document.querySelector("#anim02");
+    //     player1.load("https://assets2.lottiefiles.com/private_files/lf30_nnoebnoq.json");
+    //     player2.load("https://assets2.lottiefiles.com/private_files/lf30_nnoebnoq.json");
+    //     player2.play();
+        
+    // LottieInteractivity.create({
+    //   mode: 'scroll',
+    //   player: '#anim01',
+    //   container: "#MyContainerId",
+    //   actions: [
+    //     {
+    //       visibility: [0, 0.3],
+    //       type: 'play',
+    //       frames: [0, 180]
+    //     },
+    //     {
+    //       visibility: [0.3, 1],
+    //       type: 'seek',
+    //       frames: [50, 180]
+    //     }
+    //   ],
+    // });
+//     $( document ).ready(function() {
+//     var wH = $('#MyContainerId').height();
+//     var wP = $(window).scrollTop();
+//     if (wP >= $('#intro').position().top-500) {
+//                 $("#anim01").css('right', 100 + '%')
+//                 $("#anim01").css('opacity', 1)
+//                 $("#anim02").css('opacity', 0)
+//             } else {
+//                 $("#anim01").css('right', 0 + 'px')
+//             }
+// });
+    
+    
+    $(window).scroll(function(){
+        var scrolledH = $(window).scrollTop();
+            console.log(scrolledH)
+            if (scrolledH >= $('#intro').position().top-500) {
+                $("#anim01").css('right', 100 + '%')
+            } else {
+                $("#anim01").css('right', 0 + 'px')
+            }
+    });
+    </script>
+</html>
