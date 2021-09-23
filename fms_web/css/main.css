@@ -1,0 +1,430 @@
+:root {
+    --main-color: #6f8b41;
+    --sub-color: #759cb2;
+    --red: #e38172;
+    --light-green: #d1dcb1;
+}
+
+body {
+    background-image: url(../assets/intro_bg.png);
+    background-size: 100%;
+}
+
+.highlight {
+    color: var(--main-color);
+}
+
+.highlight-red {
+    color: var(--red);
+}
+
+
+
+.title {
+    position: relative;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 360px;
+    height: 30px;
+    background-image: url(../assets/title_underline.png);
+    background-position: center;
+    background-size: 360px;
+    background-repeat: no-repeat;
+}
+
+.subtitle {
+    border-radius: 30px;
+    border: 1px solid white;
+    text-align: center;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.list-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.list-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 20px;
+    z-index: 0;
+    height: 20px;
+    background-color: white;
+
+}
+
+.list-item.checked::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -7px;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    background-size: 30px 30px;
+    background-position: center;
+    background-image: url(../assets/chiang_records_check.png);
+}
+
+.divider {
+    height: 100px;
+    border-right: 1px;
+    border-color: inherit;
+    border-style: solid;
+    width: 1px;
+    display: inline-block;
+}
+
+.nav {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.nav-btn-donate {
+    height: 70px;
+    background-color: var(--main-color);
+    background-image: url(../assets/nav_btn_donate.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.nav-btn-intro {
+    height: 70px;
+    background-color: var(--sub-color);
+    background-image: url(../assets/nav_btn_intro.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.donate-btn {
+    background-color: white;
+    border-radius: 10px 10px 0px 10px;
+    padding: 10px;
+    margin-bottom: .25rem;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.40);
+}
+
+.donate-btn.green {
+    background-color: var(--light-green);
+}
+
+.donate-btn-title {
+    font-size: 20px;
+}
+.donate-btn-subtitle {
+    font-size: 13px;
+}
+.donate-btn-amount {
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+.section {
+    position: relative;
+}
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+#landing {
+    min-height: 100vh;
+    margin-bottom: -100px;
+    z-index: 13;
+}
+
+#landing::after {
+    content: '';
+    background-image: url(../assets/landing_bg.png);
+    background-size: 100%;
+    clip-path: polygon(0 0, 100% 0%, 100% 87%, 49% 100%, 0 88%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    box-shadow: 0 0 10px black;
+}
+
+#progress {
+    padding-top: 150px;
+    min-height: 100vh;
+    margin-bottom: -100px;
+    z-index: 12;
+}
+
+#progress::after {
+    content: '';
+    background-image: url(../assets/progress_bg.png);
+    background-size: 100%;
+    background-position: bottom;
+    clip-path: polygon(0 0, 100% 0%, 100% 87%, 49% 100%, 0 88%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    box-shadow: 0 0 10px black;
+}
+
+#intro {
+    padding-top: 150px;
+    z-index: 11;
+}
+
+#events {
+    padding-bottom: 150px;
+    margin-bottom: -100px;
+    z-index: 11;
+}
+
+#events::after {
+    content: '';
+    background-image: url(../assets/intro_bg.png);
+    background-size: 100%;
+    background-position: bottom;
+    clip-path: polygon(0 0, 100% 0%, 100% 87%, 49% 100%, 0 88%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    box-shadow: 0 0 10px black;
+}
+
+#chiang-intro {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-bottom: -100px;
+    z-index: 10;
+}
+
+#chiang-intro::after {
+    content: '';
+    background-image: url(../assets/chiang_intro_bg.png);
+    background-size: auto 100%;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0%, 100% 87%, 49% 100%, 0 88%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    box-shadow: 0 0 10px black;
+}
+
+
+#chiang-records {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-bottom: -100px;
+    z-index: 9;
+}
+
+#checklist {
+    background-image: url(../assets/chiang_records_bg.png);
+    background-size: 100%;
+}
+
+#hotline {
+    color: white;
+    z-index: 888;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-bottom: -150px;
+}
+
+#hotline h1 {
+    background-image: url(../assets/hotline_decoration.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 107%;
+}
+
+#hotline::after {
+    content: '';
+    background-image: url(../assets/hotline_bg.png);
+    background-size: 100% 100%;
+    clip-path: polygon(50% 0, 100% 17%, 100% 86%, 49% 100%, 0 84%, 0 17%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    box-shadow: 0 0 10px black;
+}
+
+#school {
+    padding-top: 200px;
+    padding-bottom: 150px;
+    margin-bottom: -100px;
+    z-index: 8;
+    color: white;
+}
+
+#school::after, #press::after {
+    content: '';
+    background-image: url(../assets/school_bg.png);
+    background-size: 100%;
+    background-position: bottom;
+    clip-path: polygon(0 0, 100% 0%, 100% 87%, 49% 100%, 0 88%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    box-shadow: 0 0 10px black;
+}
+
+#chiang-quotes {
+    background-color: var(--sub-color);
+    background-image: url(../assets/chiang_quotes_bg.png);
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: 150px;
+}
+
+.quote {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 20px;
+    padding: 10px;
+    margin: 15px;
+}
+
+#donate {
+    padding-top: 50px;
+    padding-bottom: 150px;
+    margin-bottom: -100px;
+    z-index: 7;
+}
+
+#donate::after {
+    content: '';
+    background-image: url(../assets/donate_bg.png);
+    background-size: 100%;
+    background-position: bottom;
+    clip-path: polygon(0 0, 100% 0%, 100% 87%, 49% 100%, 0 88%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    box-shadow: 0 0 10px black;
+}
+
+#rewards {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-bottom: -100px;
+    z-index: 6;
+}
+
+
+#rewards::after {
+    content: '';
+    background-image: url(../assets/intro_bg.png);
+    background-size: 100%;
+    background-position: bottom;
+    clip-path: polygon(0 0, 100% 0%, 100% 87%, 49% 100%, 0 88%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    box-shadow: 0 0 10px black;
+}
+
+
+
+
+#press {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-bottom: -100px;
+    z-index: 5;
+    color: white;
+}
+
+
+
+#action {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin-bottom: -100px;
+    z-index: 4;
+}
+
+
+
+#footer {
+    background-color: #455057;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    font-size: 1rem;
+}
+
+
+/* Slick */
+#expert-slides .slider {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.40);
+    transform: scale(0.9);
+    opacity: 0.5;
+    margin-top: 50px;
+    max-width: 380px;
+}
+#expert-slides .cover {
+    padding: 5px;
+}
+
+#expert-slides .tag {
+    position: absolute;
+    top: -34px;
+    padding: 5px;
+    right: 0;
+    background-color: #d1dcb1;
+    border-radius: 5px 5px 0 0;
+}
+
+#expert-slides .slick-active {
+    transform: scale(1);
+    opacity: 1;
+}
