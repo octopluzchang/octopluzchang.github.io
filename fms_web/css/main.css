@@ -363,6 +363,7 @@ h1, h2, h3 {
 }
 
 .quote {
+    font-family: not-serif-bold;
     display: inline-block;
     background-color: white;
     color: black;
