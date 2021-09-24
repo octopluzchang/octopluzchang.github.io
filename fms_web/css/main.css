@@ -4,6 +4,26 @@
     --red: #e38172;
     --dark-color: #455057;
     --light-green: #d1dcb1;
+    --sm-width: 576px;
+    --md-width: 768px;
+    --lg-width: 992px;
+}
+
+.mobile-only {
+    display: block;
+}
+
+.desktop-only {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+    .desktop-only {
+        display: block;
+    }
 }
 
 @font-face {
@@ -71,8 +91,7 @@ h1, h2, h3 {
 }
 
 .subtitle {
-    border-radius: 30px;
-    border: 1px solid white;
+    border: 3px solid var(--main-color);
     text-align: center;
     padding: 10px 20px;
     display: inline-block;
@@ -128,7 +147,7 @@ h1, h2, h3 {
     width: 100%;
     position: fixed;
     bottom: 0;
-    left: 0;
+    right: 0;
     z-index: 999;
 }
 
@@ -149,18 +168,32 @@ h1, h2, h3 {
     background-position: center;
 }
 
+.nav-btn-donate-desktop {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .donate-btn {
-    background-color: var(--light-green);
+    background: rgb(189,198,164);
+    background: linear-gradient(315deg, rgba(189,198,164,1) 0%, rgba(234,245,202,1) 50%, rgba(189,198,164,1) 100%);
     border-radius: 10px;
     padding: 10px;
     margin-bottom: .25rem;
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.40);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .donate-btn.green {
     color: white;
-    background-color: var(--main-color);
+    background: rgb(110,130,77);
+    background: linear-gradient(315deg, rgba(110,130,77,1) 0%, rgba(150,178,104,1) 50%, rgba(110,130,77,1) 100%);
 }
 
 .donate-btn-title {
@@ -173,11 +206,15 @@ h1, h2, h3 {
 }
 .donate-btn-icon {
     width: 50px;
-    display: inline-block;
+    height: 60px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 .donate-btn-amount {
     color: var(--main-color);
-    font-size: 20px;
+    font-size: 1.8rem;
     font-family: noto-serif-bold;
 }
 
@@ -222,8 +259,8 @@ h1, h2, h3 {
 #progress::after {
     content: '';
     background-image: url(../assets/progress_bg.png);
-    background-size: 100%;
-    background-position: bottom;
+    background-size: auto 100%;
+    background-position: center;
     clip-path: polygon(0 0, 100% 0%, 100% 87%, 49% 100%, 0 88%);
     position: absolute;
     top: 0;
@@ -232,6 +269,18 @@ h1, h2, h3 {
     height: 100%;
     z-index: 0;
     box-shadow: 0 0 10px black;
+}
+
+#progress-map {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+}
+
+@media only screen and (min-width: 768px) {
+    #progress::after {
+        background-size: 100%;
+    }
 }
 
 #intro {
@@ -263,7 +312,7 @@ h1, h2, h3 {
 
 #chiang-intro {
     padding-top: 150px;
-    padding-bottom: 150px;
+    padding-bottom: 250px;
     margin-bottom: -100px;
     z-index: 10;
     filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
@@ -280,10 +329,16 @@ h1, h2, h3 {
     left: 0;
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     z-index: 0;
     box-shadow: 0 0 10px black;
 }
 
+@media only screen and (min-width: 768px) {
+    #chiang-intro::after {
+        background-size: 100%;
+    }
+}
 
 #chiang-records {
     padding-top: 150px;
@@ -292,9 +347,15 @@ h1, h2, h3 {
     z-index: 9;
 }
 
-#checklist {
+.checklist {
     background-image: url(../assets/chiang_records_bg.png);
     background-size: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .checklist {
+        margin-bottom: -100px;
+    }
 }
 
 #hotline {
@@ -331,7 +392,7 @@ h1, h2, h3 {
 #school {
     padding-top: 200px;
     padding-bottom: 150px;
-    margin-bottom: -100px;
+    margin-bottom: -150px;
     z-index: 8;
     color: white;
     filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
@@ -355,11 +416,17 @@ h1, h2, h3 {
 #chiang-quotes {
     background-color: var(--sub-color);
     background-image: url(../assets/chiang_quotes_bg.png);
-    background-size: 100%;
+    background-size: auto 100%;
     background-position: bottom;
     background-repeat: no-repeat;
     min-height: 100vh;
-    padding-top: 150px;
+    padding-top: 250px;
+}
+
+@media only screen and (min-width: 768px) {
+    #chiang-quotes {
+        background-size: 100%;
+    }
 }
 
 .quote {
@@ -375,7 +442,6 @@ h1, h2, h3 {
 }
 
 #donate {
-    padding-top: 50px;
     padding-bottom: 150px;
     margin-bottom: -100px;
     z-index: 7;
@@ -422,8 +488,6 @@ h1, h2, h3 {
 }
 
 
-
-
 #press {
     padding-top: 150px;
     padding-bottom: 150px;
@@ -442,8 +506,6 @@ h1, h2, h3 {
     z-index: 4;
 }
 
-
-
 #footer {
     background-color: #455057;
     color: white;
@@ -454,29 +516,84 @@ h1, h2, h3 {
 
 
 /* Slick */
+#expert-slides {
+    overflow: hidden;
+}
+
 #expert-slides .slider {
     background-color: white;
-    color: black;
+    color: var(--dark-color);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.40);
     transform: scale(0.9);
     opacity: 0.5;
     margin-top: 50px;
-    max-width: 380px;
+    max-width: 320px;
+    font-family: noto-san-light;
 }
+
 #expert-slides .cover {
     padding: 5px;
 }
 
-#expert-slides .tag {
-    position: absolute;
-    top: -34px;
-    padding: 5px;
-    right: 0;
-    background-color: #d1dcb1;
-    border-radius: 5px 5px 0 0;
+#expert-slides h6 {
+    font-family: noto-san-bold;
+    background-color: white;
+    position: relative;
 }
 
-#expert-slides .slick-active {
+#expert-slides h6::after {
+    content: '';
+    border: 0px;
+    border-bottom: 1px;
+    border-color: #6f8b41;
+    border-style: solid;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 67%;
+
+}
+
+#expert-slides .tag {
+    font-family: noto-san-bold;
+    position: absolute;
+    top: -34px;
+    padding: 5px 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(../assets/expert_slide_tag.png);
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 150px;
+    text-align: center;
+}
+
+#expert-slides .slick-active, #expert-slides .slick-current {
     transform: scale(1);
     opacity: 1;
+}
+.press-quote {
+    font-family: noto-serif-bold;
+    display: flex;
+    vertical-align: top;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.press-quote > div {
+    flex: 1;
+}
+
+.press-quote::before, .press-quote::after {
+    font-size: 45px;
+    
+}
+
+.press-quote::before {
+    content: '“';
+}
+
+.press-quote::after {
+    content: '”';
 }
