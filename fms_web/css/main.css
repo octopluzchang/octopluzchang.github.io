@@ -48,7 +48,7 @@
 
 body {
     background-image: url(../assets/intro_bg.png);
-    background-size: 100%;
+    background-size: 50%;
     font-family: noto-san-medium;
     letter-spacing: 0.1em;
     color: var(--dark-color);
@@ -400,7 +400,7 @@ h1, h2, h3 {
 #hotline::after {
     content: '';
     background-image: url(../assets/hotline_bg.png);
-    background-size: 100% 100%;
+    background-size: 50%;
     clip-path: polygon(50% 0, 100% 17%, 100% 86%, 49% 100%, 0 84%, 0 17%);
     position: absolute;
     top: 0;
@@ -423,7 +423,7 @@ h1, h2, h3 {
 #school::after, #press::after {
     content: '';
     background-image: url(../assets/school_bg.png);
-    background-size: 100%;
+    background-size: 50%;
     background-position: bottom;
     clip-path: polygon(0 0, 100% 0%, 100% 87%, 49% 100%, 0 88%);
     position: absolute;
@@ -473,7 +473,7 @@ h1, h2, h3 {
 #donate::after {
     content: '';
     background-image: url(../assets/donate_bg.png);
-    background-size: 100%;
+    background-size: 50%;
     background-position: bottom;
     clip-path: polygon(0 0, 100% 0%, 100% 87%, 49% 100%, 0 88%);
     position: absolute;
@@ -497,7 +497,7 @@ h1, h2, h3 {
 #rewards::after {
     content: '';
     background-image: url(../assets/intro_bg.png);
-    background-size: 100%;
+    background-size: 50%;
     background-position: bottom;
     clip-path: polygon(0 0, 100% 0%, 100% 87%, 49% 100%, 0 88%);
     position: absolute;
