@@ -59,6 +59,10 @@ h1, h2, h3 {
     line-height: 1.5em;
 }
 
+.text-shadow {
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.637);
+}
+
 .highlight {
     color: var(--main-color);
 }
