@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
         <link rel="stylesheet" href="css/slick-theme.css">
     </head>
     <body>
@@ -27,8 +28,8 @@
             <div class="container">
                 <div class="row justify-content-lg-center">
                     <div class="col-lg-6 mt-lg-5">
-                        <h2>已有<span class="highlight">1680</span>人支持</h2>
-                        <h2>已募集每月<span class="highlight">$688,888</span></h2>
+                        <h2>已有<span class="highlight countup">1680</span>人支持</h2>
+                        <h2>已募集每月$<span class="highlight countup">688,888</span></h2>
                     </div>
                     <div class="col-lg-7">
                         <div id="progress-map">
@@ -64,12 +65,18 @@
                 <div class="row mb-5">
                     <div class="col"><h1 class="title">三分鐘了解計畫</h1></div>
                 </div>
-                <div class="row mb-5">
-                    <div class="col text-center">
+                <div class="row mb-5 justify-content-center">
+                    <div class="col-12 text-center">
                         <h1>台灣有7000多座<span class="highlight">山</span>，
                             卻沒有1所<br/>
                         </h1>
-                        <img src="./assets/events_drawings.png" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-lg-8 p-0">
+                        <div class="intro-drawings">
+                            <img src="./assets/intro_drawings.gif" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
                         <h1>普及化的<span class="highlight">登山學校</span></h1>
                     </div>
                 </div>
@@ -348,104 +355,104 @@
                         <img src="./assets/chiang_quotes_writings.gif" class="img-fluid">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col text-white text-center">
-                        <h2>
-                            每月定期定額支持
-                        </h2>
-                        <p>每筆捐款均可抵稅<br/>
-                            年度紙本收據將於隔年年初寄送</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6 p-1">
-                        <div class="donate-btn">
-                            <div class="donate-btn-title">帳篷方案</div>
-                            <div class="donate-btn-subtitle">別怕，我永遠罩妳</div>
-                            <div class="donate-btn-icon"><img src="./assets/donate_ic_3000.png" class="img-fluid"></div>
-                            <div class="donate-btn-amount">$3000<small>/月</small></div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-12 text-white text-center">
+                                <h2>
+                                    每月定期定額支持
+                                </h2>
+                                <p>每筆捐款均可抵稅<br/>
+                                    年度紙本收據將於隔年年初寄送</p>
+                            </div>
+                            <div class="col-6 p-1">
+                                <div class="donate-btn">
+                                    <div class="donate-btn-title">帳篷方案</div>
+                                    <div class="donate-btn-subtitle">別怕，我永遠罩妳</div>
+                                    <div class="donate-btn-icon"><img src="./assets/donate_ic_3000.png" class="img-fluid"></div>
+                                    <div class="donate-btn-amount">$3000<small>/月</small></div>
+                                </div>
+                            </div>
+                            <div class="col-6 p-1">
+                                <div class="donate-btn">
+                                    <div class="donate-btn-title">登山包方案</div>
+                                    <div class="donate-btn-subtitle">累了，我是妳的靠山</div>
+                                    <div class="donate-btn-icon"><img src="./assets/donate_ic_1500.png" class="img-fluid"></div>
+                                    <div class="donate-btn-amount">$1500<small>/月</small></div>
+                                </div>
+                            </div>
+                            <div class="col-6 p-1">
+                                <div class="donate-btn">
+                                    <div class="donate-btn-title">登山鞋方案</div>
+                                    <div class="donate-btn-subtitle">明天，我陪妳跨越</div>
+                                    <div class="donate-btn-icon"><img src="./assets/donate_ic_1200.png" class="img-fluid"></div>
+                                    <div class="donate-btn-amount">$1200<small>/月</small></div>
+                                </div>
+                            </div>
+                            <div class="col-6 p-1">
+                                <div class="donate-btn">
+                                    <div class="donate-btn-title">頭燈方案</div>
+                                    <div class="donate-btn-subtitle">黑夜，我為妳指路</div>
+                                    <div class="donate-btn-icon"><img src="./assets/donate_ic_900.png" class="img-fluid"></div>
+                                    <div class="donate-btn-amount">$900<small>/月</small></div>
+                                </div>
+                            </div>
+                            <div class="col-6 p-1">
+                                <div class="donate-btn">
+                                    <div class="donate-btn-title">登山杖方案</div>
+                                    <div class="donate-btn-subtitle">前進，我挺妳</div>
+                                    <div class="donate-btn-icon"><img src="./assets/donate_ic_300.png" class="img-fluid"></div>
+                                    <div class="donate-btn-amount">$300<small>/月</small></div>
+                                </div>
+                            </div>
+                            <div class="col-6 p-1">
+                                <div class="donate-btn">
+                                    <div class="donate-btn-amount">自訂<br/>金額</div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 p-1">
-                        <div class="donate-btn">
-                            <div class="donate-btn-title">登山包方案</div>
-                            <div class="donate-btn-subtitle">累了，我是妳的靠山</div>
-                            <div class="donate-btn-icon"><img src="./assets/donate_ic_1500.png" class="img-fluid"></div>
-                            <div class="donate-btn-amount">$1500<small>/月</small></div>
+                        <div class="row mt-4 mb-4">
+                            <div class="col text-center">
+                                <div class="divider text-white"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-6 p-1">
-                        <div class="donate-btn">
-                            <div class="donate-btn-title">登山鞋方案</div>
-                            <div class="donate-btn-subtitle">明天，我陪妳跨越</div>
-                            <div class="donate-btn-icon"><img src="./assets/donate_ic_1200.png" class="img-fluid"></div>
-                            <div class="donate-btn-amount">$1200<small>/月</small></div>
-                        </div>
-                    </div>
-                    <div class="col-6 p-1">
-                        <div class="donate-btn">
-                            <div class="donate-btn-title">頭燈方案</div>
-                            <div class="donate-btn-subtitle">黑夜，我為妳指路</div>
-                            <div class="donate-btn-icon"><img src="./assets/donate_ic_900.png" class="img-fluid"></div>
-                            <div class="donate-btn-amount">$900<small>/月</small></div>
-                        </div>
-                    </div>
-                    <div class="col-6 p-1">
-                        <div class="donate-btn">
-                            <div class="donate-btn-title">登山杖方案</div>
-                            <div class="donate-btn-subtitle">前進，我挺妳</div>
-                            <div class="donate-btn-icon"><img src="./assets/donate_ic_300.png" class="img-fluid"></div>
-                            <div class="donate-btn-amount">$300<small>/月</small></div>
-                        </div>
-                    </div>
-                    <div class="col-6 p-1">
-                        <div class="donate-btn">
-                            <div class="donate-btn-amount">自訂<br/>金額</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col text-center">
-                        <div class="divider text-white"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col"><h2 class="text-white text-center">你也可以單筆捐款</h2></div>
-                </div>
-                <div class="row">
-                    <div class="col-4 p-1">
-                        <div class="donate-btn green">
-                            <div class="donate-btn-title">$3600</div>
-                        </div>
-                    </div>
-                    <div class="col-4 p-1">
-                        <div class="donate-btn green">
-                            <div class="donate-btn-title">$7200</div>
-                        </div>
-                    </div>
-                    <div class="col-4 p-1">
-                        <div class="donate-btn green">
-                            <div class="donate-btn-title">$14400</div>
-                        </div>
-                    </div>
-                    <div class="col-4 p-1">
-                        <div class="donate-btn green">
-                            <div class="donate-btn-title">$18000</div>
-                        </div>
-                    </div>
-                    <div class="col-4 p-1">
-                        <div class="donate-btn green">
-                            <div class="donate-btn-title">$36000</div>
-                        </div>
-                    </div>
-                    <div class="col-4 p-1">
-                        <div class="donate-btn green">
-                            <div class="donate-btn-title">自訂</div>
-                        </div>
-                    </div>
-                    <div class="col-12 p-1">
-                        <div class="donate-btn green">
-                            <div class="donate-btn-title">企業捐款（十萬元以上）</div>
+                        <div class="row">
+                            <div class="col-12"><h2 class="text-white text-center mb-4">你也可以單筆捐款</h2></div>
+                            <div class="col-4 p-1">
+                                <div class="donate-btn green">
+                                    <div class="donate-btn-title">$3600</div>
+                                </div>
+                            </div>
+                            <div class="col-4 p-1">
+                                <div class="donate-btn green">
+                                    <div class="donate-btn-title">$7200</div>
+                                </div>
+                            </div>
+                            <div class="col-4 p-1">
+                                <div class="donate-btn green">
+                                    <div class="donate-btn-title">$14400</div>
+                                </div>
+                            </div>
+                            <div class="col-4 p-1">
+                                <div class="donate-btn green">
+                                    <div class="donate-btn-title">$18000</div>
+                                </div>
+                            </div>
+                            <div class="col-4 p-1">
+                                <div class="donate-btn green">
+                                    <div class="donate-btn-title">$36000</div>
+                                </div>
+                            </div>
+                            <div class="col-4 p-1">
+                                <div class="donate-btn green">
+                                    <div class="donate-btn-title">自訂</div>
+                                </div>
+                            </div>
+                            <div class="col-12 p-1">
+                                <div class="donate-btn green">
+                                    <div class="donate-btn-title">企業捐款（十萬元以上）</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -459,28 +466,56 @@
                     </div>
                 </div>
                 <div class="row mb-5">
-                    <div class="col-md-6">
-                        <img src="./assets/reward_prize_all.png" class="img-fluid">
+                    <div class="col-md-6 mb-2">
+                        <a href="./assets/reward_prize_all.png" data-fancybox="gallery">
+                            <div class="rewards-item">
+                                <img src="./assets/reward_prize_all.png" class="img-fluid">
+                            </div>
+                        </a>
                     </div>
                     <div class="col-md-6">
-                        <img src="./assets/reward_prize_table.png" class="img-fluid">
+                        <a href="./assets/reward_prize_table.png" data-fancybox="gallery">
+                            <div class="rewards-item">
+                                <img src="./assets/reward_prize_table.png" class="img-fluid">
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 mb-2">
-                        <img src="./assets/reward_prize_1.png" class="img-fluid">
+                       <a href="./assets/reward_prize_1.png" data-fancybox="gallery">
+                            <div class="rewards-item">
+                                <img src="./assets/reward_prize_1.png" class="img-fluid">
+                            </div>
+                       </a>
                     </div>
                     <div class="col-md-6 mb-2">
-                        <img src="./assets/reward_prize_2.png" class="img-fluid">
+                        <a href="./assets/reward_prize_2.png" data-fancybox="gallery">
+                            <div class="rewards-item">
+                                <img src="./assets/reward_prize_2.png" class="img-fluid">
+                            </div>
+                        </a>
                     </div>
                     <div class="col-md-6 mb-2">
-                        <img src="./assets/reward_prize_3.png" class="img-fluid">
+                        <a href="./assets/reward_prize_3.png" data-fancybox="gallery">
+                            <div class="rewards-item">
+                                <img src="./assets/reward_prize_3.png" class="img-fluid">
+                            </div>
+                        </a>
                     </div>
                     <div class="col-md-6 mb-2">
-                        <img src="./assets/reward_prize_4.png" class="img-fluid">
+                        <a href="./assets/reward_prize_4.png" data-fancybox="gallery">
+                            <div class="rewards-item">
+                                <img src="./assets/reward_prize_4.png" class="img-fluid">
+                            </div>
+                        </a>
                     </div>
                     <div class="col-md-6 mb-2">
-                        <img src="./assets/reward_prize_5.png" class="img-fluid">
+                        <a href="./assets/reward_prize_5.png" data-fancybox="gallery">
+                            <div class="rewards-item">
+                                <img src="./assets/reward_prize_5.png" class="img-fluid">
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -587,29 +622,33 @@
             <div class="w-100 mobile-only">
                 <div class="row">
                     <div class="col-6 p-0 text-center">
-                        <div class="nav-btn-intro pr-5 pl-5 pt-3 pb-3"></div>
+                        <a href="#intro"><div class="nav-btn-intro pr-5 pl-5 pt-3 pb-3"></div></a href="#intro">
                     </div>
                     <div class="col-6 p-0 text-center">
-                        <div class="nav-btn-donate pr-5 pl-5 pt-3 pb-3"></div>
+                        <a href="#donate"><div class="nav-btn-donate pr-5 pl-5 pt-3 pb-3"></div></a>
                     </div>
                 </div>
             </div>
             <div class="desktop-only">
                 <div class="nav-btn-donate-desktop">
-                    <img src="./assets/nav_btn_donate_desktop.png" class="img-fluid">
+                    <a href="#donate"><img src="./assets/nav_btn_donate_desktop.png" class="img-fluid"></a>
                 </div>
             </div>
         </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/tgs-player.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script> -->
     <script src="./js/progressbar.min.js"></script>
+    <script src="./js/countup.min.js"></script>
 
 
     <script>
+        $('.countup').countUp();
         var bar = new ProgressBar.Path('#Path_4', {
                     duration: 1400
                     });
@@ -622,7 +661,7 @@
                     if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
                         bar.animate(0.87);
                     } else {
-                        bar.set(0);
+                        bar.set(0); 
                     }
             });
         $(document).ready(function(){
@@ -658,10 +697,8 @@
                         row.addClass('checked');
                     }, 300*i);
                 })
-                console.log('in')
             } else {
                 // $('.checklist .list-item').removeClass('checked');
-                console.log('out')
             }
         });
 
