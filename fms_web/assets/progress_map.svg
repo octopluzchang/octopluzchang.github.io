@@ -1,32 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" viewBox="0 0 500 500">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="705" height="754" viewBox="0 0 705 754">
   <defs>
     <clipPath id="clip-progress_map">
-      <rect width="500" height="500"/>
+      <rect width="705" height="754"/>
     </clipPath>
   </defs>
   <g id="progress_map" clip-path="url(#clip-progress_map)">
-    <path id="Path_5" data-name="Path 5" d="M459,3468.012s65.57,13.574,85.984-30.823,70.04-3.86,93.429-40.9-45.07-57.613,10.943-111.344,86.56-30.758,92.813-94.068,43.831-35.923,71.039-66.765,35.961-68.036,35.961-68.036" transform="translate(-381.085 -3018.023)" fill="none" stroke="#9f9f9f" stroke-linecap="round" stroke-width="17"/>
-    <path id="Path_3" data-name="Path 3" d="M459,3468.012s65.57,13.574,85.984-30.823,70.04-3.86,93.429-40.9-45.07-57.613,10.943-111.344,86.56-30.758,92.813-94.068,43.831-35.923,71.039-66.765,35.961-68.036,35.961-68.036" transform="translate(-381.085 -3018.023)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="14"/>
-    <path id="Path_4" data-name="Path 4" d="M459,3468.012s65.57,13.574,85.984-30.823,70.04-3.86,93.429-40.9-45.07-57.613,10.943-111.344,86.56-30.758,92.813-94.068,43.831-35.923,71.039-66.765,35.961-68.036,35.961-68.036" transform="translate(-381.085 -3018.023)" fill="none" stroke="#de7373" stroke-linecap="round" stroke-width="14"/>
-    <rect id="Rectangle_48" data-name="Rectangle 48" width="136" height="28" rx="14" transform="translate(22 352)" fill="#6c8c45"/>
-    <rect id="Rectangle_49" data-name="Rectangle 49" width="136" height="28" rx="14" transform="translate(73 274)" fill="#6c8c45"/>
-    <rect id="Rectangle_50" data-name="Rectangle 50" width="136" height="28" rx="14" transform="translate(131 203)" fill="#6c8c45"/>
-    <rect id="Rectangle_51" data-name="Rectangle 51" width="136" height="28" rx="14" transform="translate(192 121)" fill="#6c8c45"/>
-    <rect id="Rectangle_52" data-name="Rectangle 52" width="136" height="28" rx="14" transform="translate(257 47)" fill="#186bb2"/>
-    <text id="基地營_20萬_月" data-name="基地營 20萬/月" transform="translate(38 372)" fill="#fff" font-size="15" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">基地營 20萬/月</tspan></text>
-    <text id="第一營_40萬_月" data-name="第一營 40萬/月" transform="translate(89 294)" fill="#fff" font-size="15" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">第一營 40萬/月</tspan></text>
-    <text id="第二營_60萬_月" data-name="第二營 60萬/月" transform="translate(147 223)" fill="#fff" font-size="15" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">第二營 60萬/月</tspan></text>
-    <text id="第三營_80萬_月" data-name="第三營 80萬/月" transform="translate(208 141)" fill="#fff" font-size="15" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">第三營 80萬/月</tspan></text>
-    <text id="登頂_90萬_月" data-name="登頂！ 90萬/月" transform="translate(273 67)" fill="#fff" font-size="15" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">登頂！ 90萬/月</tspan></text>
-    <text id="解鎖登山課程" transform="translate(44 400)" fill="#414141" font-size="15" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">解鎖登山課程</tspan></text>
-    <text id="解鎖氣象_生態課程" data-name="解鎖氣象、生態課程" transform="translate(61 322)" fill="#414141" font-size="15" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">解鎖氣象、生態課程</tspan></text>
-    <text id="解鎖醫療_急救課程" data-name="解鎖醫療、急救課程" transform="translate(119 251)" fill="#414141" font-size="15" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">解鎖醫療、急救課程</tspan></text>
-    <text id="出版教科書" transform="translate(214 169)" fill="#414141" font-size="15" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">出版教科書</tspan></text>
-    <text id="架設線上教育平台_完成教育系統研發" data-name="架設線上教育平台、完成教育系統研發" transform="translate(120 95)" fill="#414141" font-size="15" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">架設線上教育平台、完成教育系統研發</tspan></text>
-    <circle id="Ellipse_5" data-name="Ellipse 5" cx="19" cy="19" r="19" transform="translate(158 383)" fill="#6c8c45"/>
-    <circle id="Ellipse_6" data-name="Ellipse 6" cx="19" cy="19" r="19" transform="translate(229 277)" fill="#6c8c45"/>
-    <circle id="Ellipse_7" data-name="Ellipse 7" cx="19" cy="19" r="19" transform="translate(294 212)" fill="#6c8c45"/>
-    <circle id="Ellipse_8" data-name="Ellipse 8" cx="19" cy="19" r="19" transform="translate(349 124)" fill="#6c8c45"/>
-    <circle id="Ellipse_9" data-name="Ellipse 9" cx="19" cy="19" r="19" transform="translate(445 28)" fill="#186bb2"/>
+    <rect id="Rectangle_48" data-name="Rectangle 48" width="158" height="33" rx="16.5" transform="translate(51 619.895)" fill="#6c8c45"/>
+    <rect id="Rectangle_49" data-name="Rectangle 49" width="159" height="32" rx="16" transform="translate(109 476.894)" fill="#6c8c45"/>
+    <rect id="Rectangle_50" data-name="Rectangle 50" width="159" height="33" rx="16.5" transform="translate(160.5 353.895)" fill="#6c8c45"/>
+    <rect id="Rectangle_51" data-name="Rectangle 51" width="159" height="33" rx="16.5" transform="translate(216 228.895)" fill="#6c8c45"/>
+    <rect id="Rectangle_52" data-name="Rectangle 52" width="158" height="32" rx="16" transform="translate(273.5 54.895)" fill="#186bb2"/>
+    <text id="基地營_20萬_月" data-name="基地營 20萬/月" transform="translate(73 642.895)" fill="#fff" font-size="17" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">基地營 20萬/月</tspan></text>
+    <text id="第一營_40萬_月" data-name="第一營 40萬/月" transform="translate(130 499.895)" fill="#fff" font-size="17" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">第一營 40萬/月</tspan></text>
+    <text id="第二營_60萬_月" data-name="第二營 60萬/月" transform="translate(181.5 377.895)" fill="#fff" font-size="17" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">第二營 60萬/月</tspan></text>
+    <text id="第三營_80萬_月" data-name="第三營 80萬/月" transform="translate(238 252.895)" fill="#fff" font-size="17" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">第三營 80萬/月</tspan></text>
+    <text id="解鎖登山課程" transform="translate(97 675.895)" fill="#414141" font-size="17" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">解鎖登山課程</tspan></text>
+    <text id="解鎖氣象_生態課程" data-name="解鎖氣象、生態課程" transform="translate(95 532.895)" fill="#414141" font-size="17" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">解鎖氣象、生態課程</tspan></text>
+    <text id="解鎖醫療_急救課程" data-name="解鎖醫療、急救課程" transform="translate(147.5 409.895)" fill="#414141" font-size="17" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">解鎖醫療、急救課程</tspan></text>
+    <text id="出版教科書" transform="translate(277 286.895)" fill="#414141" font-size="17" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">出版教科書</tspan></text>
+    <text id="架設線上教育平台_完成教育系統研發" data-name="架設線上教育平台
+完成教育系統研發" transform="translate(282.5 118.894)" fill="#414141" font-size="17" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">架設線上教育平台</tspan><tspan x="0" y="25">完成教育系統研發</tspan></text>
+    <text id="登頂_90萬_月" data-name="登頂！ 90萬/月" transform="translate(295.5 77.895)" fill="#fff" font-size="17" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">登頂！ 90萬/月</tspan></text>
+    <path id="Path_9" data-name="Path 9" d="M882.831,1236.711c44.413-9.584,66.448-40.822,72.274-69.717s.764-58.836,14.472-86.692c11.759-23.9,36.675-44.732,47.739-68.756,12.873-27.958,6.1-58.251,18.561-86.281,8.738-19.654,26.484-37.211,41.186-55.45,32.969-40.9,51.088-86.356,52.64-132.057,1-29.383,14.7-113.368,49.645-133.257" transform="translate(-667.831 -521.605)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
+    <path id="Path_10" data-name="Path 10" d="M882.831,1236.711c44.413-9.584,66.448-40.822,72.274-69.717s.764-58.836,14.472-86.692c11.759-23.9,36.675-44.732,47.739-68.756,12.873-27.958,6.1-58.251,18.561-86.281,8.738-19.654,26.484-37.211,41.186-55.45,32.969-40.9,51.088-86.356,52.64-132.057,1-29.383,14.7-113.368,49.645-133.257" transform="translate(-667.831 -521.605)" fill="none" stroke="#d7b97e" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/>
   </g>
 </svg>
