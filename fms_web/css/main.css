@@ -259,6 +259,15 @@ h1, h2, h3, h4 {
     animation-delay: 1s;
 }
 
+@keyframes glowing {
+    0% { box-shadow: 0 0 -10px white; }
+    60% { box-shadow: 0 0 20px white; }
+    100% { box-shadow: 0 0 -10px white; }
+  }
+  .glowing {
+    animation: glowing 2000ms infinite;
+  }
+
 .donate-btn {
     background: rgb(189,198,164);
     background: linear-gradient(315deg, rgba(189,198,164,1) 0%, rgba(234,245,202,1) 50%, rgba(189,198,164,1) 100%);
@@ -274,6 +283,20 @@ h1, h2, h3, h4 {
     justify-content: center;
     overflow: hidden;
     position: relative;
+    color: inherit;
+    text-decoration: none;
+    transition: linear 0.1s;
+}
+
+.donate-btn:hover {
+    animation: glowing 2000ms infinite;
+    color: inherit;
+    text-decoration: none;
+}
+
+.donate-btn:active {
+    transform: scale(0.95);
+    transition: linear 0.1s;
 }
 
 .donate-btn.green {
