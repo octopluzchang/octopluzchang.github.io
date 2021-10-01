@@ -409,7 +409,7 @@ h1, h2, h3, h4 {
 
 #intro {
     padding: 150px 0;
-    margin-bottom: -100px;
+    margin-bottom: -120px;
     z-index: 11;
     overflow-x: hidden;
     filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
@@ -442,7 +442,7 @@ h1, h2, h3, h4 {
     background-image: url(../assets/chiang_intro_bg.png);
     background-size: auto 130%;
     background-position: top;
-    clip-path: polygon(0 0, 100% 0%, 100% 90%, 49% 100%, 0 90%);
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 49% 98%, 0 90%);
     position: absolute;
     top: 0;
     left: 0;
