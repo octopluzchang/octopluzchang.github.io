@@ -103,6 +103,7 @@ h1, h2, h3, h4 {
     text-align: center;
     padding: 10px 20px;
     display: inline-block;
+    white-space: nowrap;
 }
 
 .list-item {
@@ -191,6 +192,73 @@ h1, h2, h3, h4 {
     transform: translateY(-30%);
 }
 
+@keyframes shine {
+    0% {
+        transform: skewX(20deg) translateX(0);
+    }
+
+    80% {
+        transform: skewX(20deg) translateX(0);
+    }
+
+    100% {
+        transform: skewX(20deg) translateX(800px);
+    }
+}
+
+.shine_1 {
+    position: absolute;
+    top: 0;
+    left: -75px;
+    height: 200px;
+    width: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    transform: skewX(20deg);
+    animation-name: shine;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.shine_2 {
+    position: absolute;
+    top: 0;
+    left: -75px;
+    height: 200px;
+    width: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    transform: skewX(20deg);
+    animation-name: shine;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+.shine_3 {
+    position: absolute;
+    top: 0;
+    left: -75px;
+    height: 200px;
+    width: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    transform: skewX(20deg);
+    animation-name: shine;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.shine_4 {
+    position: absolute;
+    top: 0;
+    left: -75px;
+    height: 200px;
+    width: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    transform: skewX(20deg);
+    animation-name: shine;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
 .donate-btn {
     background: rgb(189,198,164);
     background: linear-gradient(315deg, rgba(189,198,164,1) 0%, rgba(234,245,202,1) 50%, rgba(189,198,164,1) 100%);
@@ -204,6 +272,8 @@ h1, h2, h3, h4 {
     height: 100%;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
 }
 
 .donate-btn.green {
@@ -268,7 +338,7 @@ h1, h2, h3, h4 {
 }
 
 #progress {
-    padding: 200px 0 250px;
+    padding: 230px 0 250px;
     min-height: 100vh;
     margin-bottom: -100px;
     z-index: 12;
@@ -328,10 +398,12 @@ h1, h2, h3, h4 {
 @media only screen and (min-width: 768px) {
     .intro-photo-1 {
         transform: rotate(15deg) translateX(100px) scale(1.2);
+        max-width: 400px;
     }
     .intro-photo-2 {
         transform: rotate(-15deg) translateX(150px) translateY(10px) scale(1.2);
         margin-bottom: -200px;
+        max-width: 400px;
     }
 }
 
@@ -359,7 +431,7 @@ h1, h2, h3, h4 {
 }
 
 #chiang-intro {
-    padding: 120px 0;
+    padding: 150px 0 120px;
     z-index: 10;
     height: 100vh;
     filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
@@ -579,7 +651,9 @@ h1, h2, h3, h4 {
     filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
 
-
+.press-logo img {
+    margin: 0 auto;
+}
 
 #action {
     padding-top: 150px;

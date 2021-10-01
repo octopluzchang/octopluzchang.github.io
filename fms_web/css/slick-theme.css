@@ -28,17 +28,16 @@
     background-size: auto 100%;
     background-image: url(./slide_arrow.png);
     background-color: transparent;
-    height: 50px;
-    width: 23px;
+    background-repeat: no-repeat;
+    border: none;
+    height: 70px;
+    width: 40px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
-
     cursor: pointer;
-
     color: transparent;
-    border: none;
     outline: none;
 }
 .slick-prev:hover,
@@ -74,7 +73,7 @@
 {
     margin-top: -21px;
     z-index: 9;
-    left: 20px;
+    left: 0px;
     transform: rotate(180deg);
 }
 [dir='rtl'] .slick-prev
@@ -94,7 +93,7 @@
 
 .slick-next
 {
-    right: 20px;
+    right: 0px;
 }
 [dir='rtl'] .slick-next
 {
