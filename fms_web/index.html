@@ -758,7 +758,7 @@
        var tmp = null;
        $.ajax({
          'async': false,
-         url: "https://callsoverridges.neticrm.tw/sites/all/modules/civicrm//extern/widget.php?cpageId=12&widgetId=&language=zh_TW",
+         url: "https://fms.neticrm.tw/sites/all/modules/civicrm/extern/widget.php?cpageId=3&widgetId=&language=zh_TW",
          type: 'GET',
          success: function(str) {
            eval(str)
@@ -772,7 +772,7 @@
        var tmp = null;
        $.ajax({
          'async': false,
-         url: "https://callsoverridges.neticrm.tw/sites/all/modules/civicrm//extern/widget.php?cpageId=12&widgetId=&language=en",
+         url: "https://fms.neticrm.tw/sites/all/modules/civicrm/extern/widget.php?cpageId=3&widgetId=&language=zh_TW",
          type: 'GET',
          success: function(str) {
            eval(str)
@@ -801,8 +801,6 @@
      console.log('sum_donor', sum_donor)
      $('#count_donor').text(sum_donor)
      $('#count_fundings').text(fund_sum)
-     $('#count_donor').text('0')
-     $('#count_fundings').text('0')
      $('.countup').countUp();
             var bar = new ProgressBar.Path('#Path_10', {
                     duration: 1400
@@ -814,7 +812,7 @@
                 var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
                 var top_of_screen = $(window).scrollTop();
                     if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
-                        bar.animate(0 / 100);
+                        bar.animate(fund_sum / fund_taget);
                     } else {
                         bar.set(0); 
                     }
